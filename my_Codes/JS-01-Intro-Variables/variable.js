@@ -38,7 +38,7 @@ console.log(sayi2 + 56); //4556
 
 //! Bir string ile number toplanirsa aslinda toplama yapmaz, onlari iki kelime gibi yanyana yazar.
 
-console.log(sayi2 - 34); //45-34=11
+console.log(sayi2 - 34); //11
 console.log(sayi2); //45
 
 //! ===================  VAR VERİ TİPİ ===============================
@@ -47,3 +47,33 @@ console.log(sayi2); //45
 //* Degisken fonksiyon icerisinde tanimlandi ise ancak o fonksiyonda erisilebilir. (Function-Scoped)
 //? Eger, degisken fonksiyonlarin disinda tanimlandi ise tüm her yerden erisilebilir. (Global-Scoped)
 //! Günümüzde programcilar global degisken gerekmedikce var ile degisken tanimlamayi secmemektedir.
+
+var sayi3 = 67;
+
+sayi3 = 56;
+
+console.log(sayi3); //56
+
+console.log("*************************");
+
+var ilk = "global";
+
+console.log(ilk); //global
+
+{
+  console.log(ilk); //global
+
+  ilk = "GLOBAL";
+  console.log(ilk); //GLOBAL
+
+  var ikinci = "naber";
+}
+
+console.log(ikinci); //naber
+console.log(ilk); //GLOBAL // var oldugu icin süslünün disindan da erisebildik.
+
+console.log("*********** LET **************");
+
+let first = "osman"; //global-scoped
+
+console.log(first); //osman
