@@ -38,4 +38,12 @@ console.log(sayi2 + 56); //4556
 
 //! Bir string ile number toplanirsa aslinda toplama yapmaz, onlari iki kelime gibi yanyana yazar.
 
+console.log(sayi2 - 34); //45-34=11
+console.log(sayi2); //45
 
+//! ===================  VAR VERİ TİPİ ===============================
+//? var ile bir degisken tanimlandiginda let de oldugu gibi degeri sonradan degistirilebilir.
+//! var degiskenleri tanimlandigi yere göre global veya fonksiyon icerisinde erisilebilir.
+//* Degisken fonksiyon icerisinde tanimlandi ise ancak o fonksiyonda erisilebilir. (Function-Scoped)
+//? Eger, degisken fonksiyonlarin disinda tanimlandi ise tüm her yerden erisilebilir. (Global-Scoped)
+//! Günümüzde programcilar global degisken gerekmedikce var ile degisken tanimlamayi secmemektedir.
