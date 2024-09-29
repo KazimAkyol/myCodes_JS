@@ -100,13 +100,13 @@ const erste = "kazim";
 console.log(erste); //kazim
 
 {
-    console.log(erste); //kazim
+  console.log(erste); //kazim
 
-    // erste = "muhterem"; // seklinde degistirmeye calisinca hata verdi.
+  // erste = "muhterem"; // seklinde degistirmeye calisinca hata verdi.
 
-    const zweite = "gökhan";
+  const zweite = "gökhan";
 
-    console.log(zweite); //gökhan
+  console.log(zweite); //gökhan
 }
 
 // console.log(zweite);
