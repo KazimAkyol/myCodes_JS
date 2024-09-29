@@ -83,9 +83,58 @@ console.log(Math.random()); // 0-1 arasinda rastgele bir sayi üretir.
 console.log(Math.random());
 console.log(Math.ceil(Math.random() * 20)); // 1-20 arasinda rastgele bir sayi üretir.
 
-//* ARTTIRMA, AZALTMA
+//? ARTTIRMA VE AZALTMA
 
 let a = 5;
-
 console.log("ilk", a++); //5
 console.log("ikinci", a); //6
+
+let b = a++;
+console.log(b); //6
+console.log(a); //7
+
+let c = 10;
+console.log("ilk", ++c); //11
+
+let d = ++c;
+console.log(d); //12
+console.log(c); //12
+
+let e = 33;
+console.log("ilk", e--); //33
+console.log("ikinci", e); //32
+
+console.log(--e); //31
+console.log(e); //31
+
+//! e'yi 5 arttir
+
+e = e + 5;
+console.log(e); //36
+console.log((e += 5)); //41
+
+//! e'yi 5 ile carp
+
+e = e * 5;
+console.log(e); //205
+console.log((e *= 5)); //1025
+console.log((e -= 5)); //1020
+console.log((e /= 5)); //204
+console.log((e %= 5)); //4
+
+//? CARPMA VE ÜS ALMA
+
+const PI = 3.14;
+const yaricap = 5;
+
+console.log(PI * yaricap ** 2); //78.5
+
+//! Math pow(power) bir sayinin kuvvetini/üssünü almak icin kullanilir.
+
+console.log(PI * Math.pow(yaricap, 2)); //78.5
+
+//! Math sqrt metodu verilen degerin karekökünü alir.
+
+console.log(Math.sqrt(144)); //12
+
+console.log(144 ** (1 / 2)); //12
