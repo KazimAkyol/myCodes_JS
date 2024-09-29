@@ -88,3 +88,27 @@ console.log(first); //osman
   let second = 45;
   console.log(second); //45
 }
+
+console.log(first); //hüseyin
+
+// console.log(second);
+// let ve const ile tanimlanan block'taki elemana disaridan erisemeyoz.
+
+console.log("*********** CONST **************");
+
+const erste = "kazim";
+console.log(erste); //kazim
+
+{
+    console.log(erste); //kazim
+
+    // erste = "muhterem"; // seklinde degistirmeye calisinca hata verdi.
+
+    const zweite = "gökhan";
+
+    console.log(zweite); //gökhan
+}
+
+// console.log(zweite);
+
+// const ve let icin scope icinde olan scope (süslü) kalir.
