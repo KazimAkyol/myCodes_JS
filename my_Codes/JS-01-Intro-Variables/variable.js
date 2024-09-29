@@ -77,3 +77,14 @@ console.log("*********** LET **************");
 let first = "osman"; //global-scoped
 
 console.log(first); //osman
+
+{
+  // block scope
+  console.log(first); //osman
+
+  first = "hüseyin";
+  console.log(first); //hüseyin
+
+  let second = 45;
+  console.log(second); //45
+}
