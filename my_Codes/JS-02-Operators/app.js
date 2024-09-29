@@ -86,3 +86,6 @@ console.log(Math.ceil(Math.random() * 20)); // 1-20 arasinda rastgele bir sayi Ã
 //* ARTTIRMA, AZALTMA
 
 let a = 5;
+
+console.log("ilk", a++); //5
+console.log("ikinci", a); //6
