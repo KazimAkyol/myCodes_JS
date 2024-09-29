@@ -48,32 +48,49 @@ console.log("*******Hesap Makinesi*******");
 // 7 * 5 = 35
 // 7 / 5 = 1
 
-const sayi1 = +prompt("1.sayiyi griniz");
-const islem = prompt(" Bir operatör giriniz(+,-,*,/):");
-const sayi2 = +prompt("2.sayiyi giriniz");
+// const sayi1 = +prompt("1.sayiyi griniz");
+// const islem = prompt(" Bir operatör giriniz(+,-,*,/):");
+// const sayi2 = +prompt("2.sayiyi giriniz");
 
-let sonuc;
+// let sonuc;
 
-if (islem == "+") {
-  sonuc = sayi1 + sayi2;
-} else if (islem == "-") {
-  sonuc = sayi1 - sayi2;
-} else if (islem == "*") {
-  sonuc = sayi1 * sayi2;
-} else if (islem == "/") {
-  sonuc = sayi1 / sayi2;
+// if (islem == "+") {
+//   sonuc = sayi1 + sayi2;
+// } else if (islem == "-") {
+//   sonuc = sayi1 - sayi2;
+// } else if (islem == "*") {
+//   sonuc = sayi1 * sayi2;
+// } else if (islem == "/") {
+//   sonuc = sayi1 / sayi2;
+// } else {
+//   console.log("Yanlis operatör girdiniz");
+// }
+
+// console.log("SONUC", sonuc);
+
+// if (sonuc != 0) {
+//   console.log("Tebrikler bir sonuc buldunuz", sonuc);
+// }
+
+// //* 1.Kisayol
+// if (sonuc) {
+//   console.log("Tebrikler bir sonuc buldunuz", sonuc);
+// }
+
+// short circuit
+
+// && and
+// || or
+
+// && : hepsi dogru olmali, hepsi True sonuncuyu alir.
+
+//sonuc && console.log("Bir somuc buldunuz");
+
+let yas = 17;
+let h = "saglikli";
+
+if (yas > 18 && h == "saglikli") {
+  console.log("Askerlik yapabilir");
 } else {
-  console.log("Yanlis operatör girdiniz");
+  console.log("Askerlik yapamaz");
 }
-
-console.log("SONUC", sonuc);
-
-if (sonuc != 0) {
-  console.log("Tebrikler bir sonuc buldunuz", sonuc);
-}
-
-//* 1.Kisayol
-if (sonuc) {
-  console.log("Tebrikler bir sonuc buldunuz", sonuc);
-}
-
