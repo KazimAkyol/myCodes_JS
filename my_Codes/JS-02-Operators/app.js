@@ -60,6 +60,7 @@ console.log(`benim adim soyadim ${isim} ${soyisim} `); //benim adim soyadim mehm
 
 const ab = 1.3;
 const cd = 1.8;
+
 console.log(Math.floor(ab)); //1
 console.log(Math.floor(cd)); //1
 
@@ -80,6 +81,7 @@ console.log(Math.random()); // 0-1 arasinda rastgele bir sayi üretir.
 
 //* RANDOM: rastgele, rastgele sayi üretmek icin kullanilir.
 //* 0-1 arasinda bir sayi üretir.
+
 console.log(Math.random());
 console.log(Math.ceil(Math.random() * 20)); // 1-20 arasinda rastgele bir sayi üretir.
 
@@ -138,3 +140,43 @@ console.log(PI * Math.pow(yaricap, 2)); //78.5
 console.log(Math.sqrt(144)); //12
 
 console.log(144 ** (1 / 2)); //12
+
+//********* MOD ALMA ******** */
+
+const number = 456;
+
+console.log("birler", 456 % 10); //birler basamagi 6
+console.log("onlar", Math.trunc((456 % 100) / 10)); //onlar basamagi 5
+console.log("yüzler", Math.trunc(456 / 100)); //yüzler basamagi 4
+
+// * =======================================================
+// *                 KARŞILAŞTIRMA OPERATÖRLERİ
+// * =======================================================
+
+const nummer = 4;
+
+console.log(nummer == 4); //true
+console.log(nummer === 4); //true
+console.log(nummer === "4"); //false
+console.log(nummer == "4"); //true
+
+console.log(nummer != 4); //false, nummer 4'e esit degil demi?
+console.log(nummer != 5); //true, nummer 5'e esit degil demi?
+console.log(nummer != "4"); //false, nummer "4" 'e esit degil demi?
+
+console.log(nummer > 4); //false
+console.log(nummer >= 4); //true
+
+// * =======================================================
+// *         MANTIKSAL OPERATORLER (logical operators)
+// * =======================================================
+
+console.log("**********************");
+
+//? TRUE:
+console.log(Boolean(5));
+console.log(Boolean(5.8));
+console.log(Boolean(-5.8));
+console.log(Boolean([1, 2, 5]));
+
+//? FALSE:
