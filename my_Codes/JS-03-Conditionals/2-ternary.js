@@ -2,7 +2,7 @@
 // Sarta bagli durumlar yazmak icin baska ve daha kisa bir yöntem de ternary operatör
 // ECMASCRIPT 6 ile gelen bir özellik
 
-//* Örnek-1: Askerlik örnegi if yapisi ile:
+//* Örnek: Askerlik örnegi if yapisi ile:
 
 // let yas = 17;
 // console.log(typeof h);
@@ -13,7 +13,7 @@
 //   console.log("Askerlik yapamaz");
 // }
 
-// //* Örnek -1: Askerlik örnegi Ternary ile:
+// //* Örnek: Askerlik örnegi Ternary ile:
 
 // yas > 18 ? console.log("Askerlik yapabilir") : console.log("Askerlik yapamaz");
 
@@ -53,3 +53,11 @@ grade > 50 ? console.log("Gectiniz") : console.log("Kaldiniz");
 
 // else icin bir degerimiz yoksa "" ve null verip kurtulabiliriz:
 grade > 50 ? console.log("Gectiniz") : null;
+
+//* ÖRNEK SORULAR
+//* Örnek-1: Bir sayi 50 ile 100 arasinda mi? Evetse 50 ile 100 arasinda, degilse bu aralikta degil yadiralim:
+
+let num = 55; // 101 degeri verildiginde "Bu aralikta degil" seklinde de console'a yazdirilabilir.
+num > 50 && num < 100
+  ? console.log("50 ile 100 arasinda")
+  : console.log("Bu aralikta degil");
