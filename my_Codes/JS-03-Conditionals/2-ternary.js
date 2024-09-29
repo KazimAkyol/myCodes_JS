@@ -26,3 +26,30 @@ if (age > 18 && health == true && gender == "male") {
 } else {
   console.log("Askerlik yapamaz");
 }
+
+let mesaj =
+  age > 18 && health == true && gender == "male"
+    ? console.log("tamam, sen git askere")
+    : console.log("hayir, asla gidemezsin");
+
+const sayi1 = 56;
+const sayi2 = 23;
+
+//* Toplamindan cikan sonuc 60'tan büyükse sayilari carp, kücükse sayilari böl:
+
+let sonuc = sayi1 + sayi2;
+
+sonuc > 60 ? console.log(sayi1 * sayi2) : console.log(sayi1 / sayi2);
+
+let result = sonuc > 60 ? sayi1 * sayi2 : sayi1 / sayi2;
+
+console.log(result);
+
+//* grade 50'den büyükse gecti, degilse kaldi:
+
+let grade = 40;
+
+grade > 50 ? console.log("Gectiniz") : console.log("Kaldiniz");
+
+// else icin bir degerimiz yoksa "" ve null verip kurtulabiliriz:
+grade > 50 ? console.log("Gectiniz") : null;
