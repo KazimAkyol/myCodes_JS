@@ -263,3 +263,13 @@ console.log(null - 5); //-5
 console.log(null == undefined); //true
 console.log(null === undefined); //false
 console.log(null === null); //true
+
+console.log(Number("asdfg")); //NaN
+
+//! GENEL KÜLTÜR
+
+console.log(Number("0x11")); // x=hexa 16'lik taban = 17
+
+console.log(Number("0b101")); // b=binary 2'lik taban = 5
+
+console.log(Number("0o11")); // o=octal 8'lik taban = 9
