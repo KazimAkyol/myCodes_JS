@@ -180,3 +180,33 @@ console.log(Boolean(-5.8));
 console.log(Boolean([1, 2, 5]));
 
 //? FALSE:
+console.log(Boolean(0));
+console.log(Boolean(null));
+console.log(Boolean(""));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN)); // false, NaN:Not a Number
+
+let v = null;
+console.log(v); //null
+
+const v1 = false || 4;
+console.log(v1); //4
+console.log(Boolean(v1)); //true
+
+const v2 = false || 0 || null || 12.6 || false || 3;
+console.log(v2); //12.6
+console.log(Boolean(v2)); //true
+
+const v3 = false || 0 || undefined || "" || null || NaN;
+console.log(v3); //NaN
+console.log(Boolean(v3)); //false
+
+const v4 = 5 && 3.5 && true && 0;
+console.log(v4); //0
+console.log(Boolean(v4)); //false
+
+const v5 = 4 && 13.4 && true && -5;
+console.log(v5); //-5
+console.log(Boolean(v5)); //false
+
+
