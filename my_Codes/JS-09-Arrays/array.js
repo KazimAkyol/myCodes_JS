@@ -59,7 +59,7 @@ console.log(meyveler);
 console.log(meyveler.pop());
 console.log(meyveler);
 
-//* shift(): komutu dizinin ilk elemanini siler, yazdirmaya kalkarsak sildigi elemani döndürür.
+//* shift(): dizinin ilk elemanini siler, yazdirmaya kalkarsak sildigi elemani döndürür.
 
 console.log(meyveler.shift());
 console.log(meyveler);
@@ -160,7 +160,18 @@ console.log(isimler1.indexOf("ipek")); //-1
 
 console.log(sayilar1.join(""));
 console.log(sayilar1.join(" "));
-console.log(sayilar1.join("A")),
+console.log(sayilar1.join("A"));
 
 //* slice():
 
+const araba = ["bmw", "mercedes", "audi", "ferrari", "lamborghini"];
+
+console.log(araba.slice(2));
+console.log(araba.slice(1, 4));
+
+//* concat():
+
+const kisiler = ["özlem", "esra", "nihal", "fatih", "hüseyin"];
+const rakamlar = [1, 2, 3, 4, 5, 6];
+
+console.log(kisiler.concat(rakamlar));
