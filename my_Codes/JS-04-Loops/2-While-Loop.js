@@ -23,3 +23,53 @@ let number = 100;
 while (number >= 100 && number <= 200) {
   number = +prompt("Bir sayi giriniz");
 }
+
+console.log("100 ile 200 arasinda bir deger girmediniz");
+
+//! Kullanicidan cevap alinip devam etme/etmeme durumlarinda kullanabiliyoruz.
+
+let cevap = "evet";
+
+while (cevap != "hayir") {
+  console.log("Merhaba, Oyunu tamamladiniz");
+  cevap = prompt("Devam etmek istiyor musunuz (evet/hayir:");
+}
+
+//* Örnek:
+
+// 1-ürün girisi
+// 2-ürün listele
+// 3-ürün sil
+// 4-cikis
+
+//! Cok kullanilan bir yapi:
+
+let check = true;
+
+while (check === true) {
+  console.log(`
+        Bir secenek giriniz:
+        1-ürün girisi
+        2-ürün listele
+        3-ürün sil
+        4-cikis`);
+
+  let tercih = Number(prompt("Tercihinizi Giriniz:"));
+
+  switch (tercih) {
+    case 1:
+      console.log("Ürün girisi yapildi");
+      break;
+    case 2:
+      console.log("Ürün listelendi");
+      break;
+    case 3:
+      console.log("Ürün silindi");
+      break;
+    case 4:
+      check = false;
+      break;
+    default:
+      console.log("Gecersiz bir deger girdiniz");
+  }
+}
