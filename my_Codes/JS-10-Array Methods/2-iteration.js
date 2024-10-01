@@ -92,4 +92,31 @@ console.log(names);
 
 const fiyatlar = [100, 300, 50, 90];
 
+fiyatlar.map((p, i, array) => {
+  if (p < 250) {
+    array[i] = p * 1.5;
+  } else {
+    array[i] = p * 1.2;
+  }
+});
 
+console.log(fiyatlar); //[150, 360, 75, 135]
+
+//* Örnek: tlPrices dizisindeki rakamlarin Euro ve dolar karsiliklarini hesaplatarak yeni dizilere kaydediniz:
+//? toFixed(sayı) komutu virgüllü sayılarda kullanılır, aldığı sayı parametresi kadar virgülden sonra eleman bırakır.
+
+//! toFixed()= kullandığınız sayıları string'e çevirir, tekrar number yapmak istersek, önlerine Number yazarız (ya da + koyarız):
+
+const tlPrices = [100, 150, 200, 80, 50];
+const dolar = 34.2;
+const euro = 38.0;
+
+const dolarPrices = tlPrices.map((a) => +(a / dolar).toFixed(2));
+
+console.log(dolarPrices);
+
+const euroPrices = tlPrices.map((a) => (a / euro).toFixed(2));
+
+console.log(euroPrices);
+
+console.log(tlPrices);
