@@ -37,6 +37,46 @@ prices2.forEach((p, i, prices) => {
 
 console.log(prices2); //[200, 500, 100, 180]
 
+//* Örnek: Meyveler dizisindeki elemanların, harf sayısı 3'ten büyük olan meyveleri büyük harfe çevir:
+
+const meyveler = ["elma", "erik", "muz", "karpuz"];
+
+meyveler.forEach((meyve) => {
+  if (meyve.length > 3) {
+    console.log(meyve.toUpperCase());
+  } else {
+    console.log(meyve);
+  }
+});
+
+//* ======================================================
+//*                       MAP METHOD
+//* ======================================================
+
+//! map yapılan değişikliği bir diziye atıp, bunu döndürebilir, forEach gibi tüketmez.
+
+//* Örnek: names dizisinin içindeki her ismi büyük harf olarak yeni bir diziye saklayalım:
+
+let names = [
+  "ayca",
+  "kemal",
+  "mustafa",
+  "ayse",
+  "fatih",
+  "halil",
+  "umut",
+  "gökçe",
+  "mehmet",
+];
+
+const yeni = names.map((isim) => isim.toUpperCase());
+
+console.log(names); //map, biz istemedikce diziyi kalici degistirmez.
+
+console.log(yeni); //Eger map'i bir degiskene atarsak verileri kalici tutmus oluruz (ister mevcut diziyi degistiririz, ister yeni bir diziye atariz.Burada yeni diziye atadik.)
+
+//* her elemanin ilk harfini kalici büyüt:
+
 //* Ödev-1: fiyatlar dizisinde her bir fiyata %10 zam yapalim. NOT: forEach kullanilmali ve orijinal dizi degistirilmeli:
 
 const fiyatlar = [100, 250, 50, 89];
@@ -72,12 +112,10 @@ prices12.forEach((price) => {
 
 const maaslar = [3000, 5000, 4000, 6000, 6500];
 
-maaslar.forEach((maas, raise) => {
-  if (maas < 4000) {
-    const newMaaslar = maas * 1.5;
-    console.log(newMaaslar);
-  }
-});
+const zamliMaaslar = maaslar
+  .filter((maas) => maas < 4000)
+  .map((maas) => maas * 1.5);
+console.log(zamliMaaslar); // [4500]
 
 //* Ödev-5: Maasi 4000'den büyük olanlara %25 zam yaparak sonuclari console'da yazdiralim:
 
