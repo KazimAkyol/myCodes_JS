@@ -77,54 +77,19 @@ console.log(yeni); //Eger map'i bir degiskene atarsak verileri kalici tutmus olu
 
 //* her elemanin ilk harfini kalici büyüt:
 
-//* Ödev-1: fiyatlar dizisinde her bir fiyata %10 zam yapalim. NOT: forEach kullanilmali ve orijinal dizi degistirilmeli:
+names = names.map((a) => a.slice(0, 1).toUpperCase() + a.slice(1));
 
-const fiyatlar = [100, 250, 50, 89];
+console.log(names);
 
-fiyatlar.forEach((fiyat, raise) => {
-  fiyatlar[raise] = fiyat * 1.1;
-});
+//* Örnek:
+//* fiyatlar dizisindeki ürün fiyatlarinın 250 TL altında olanlarına
+//* %50 zam, diğerlerine de %20 zam yapılmak isteniyor. Ayrıca
+//* zamli fiyatlar kalıcı olarak diziye işlenmek isteniyor fiyatlar[1]=eski fiyat*1.5 gibi
+//* 1. ürünün zamlı fiyati 150 TL gibi
+//* p => prices dizisinin her bir elemanı
+//* i => indis
+//* array=> fiyatlar dizisidir.
 
-console.log(fiyatlar);
+const fiyatlar = [100, 300, 50, 90];
 
-//* Ödev-2: fiyatlar dizisindeki fiyati 90'dan büyük olan degerleri console'a tek tek bastiriniz:
 
-const prices11 = [100, 250, 50, 89];
-
-prices11.forEach((price) => {
-  if (price > 90) {
-    console.log(price);
-  }
-});
-
-//* Ödev-3: fiyatlar dizisindeki fiyati 110'dan kücük olan degerlere %10 artis yapin ve bu degerleri console'a tek tek bastiriniz:
-
-const prices12 = [100, 250, 50, 89];
-
-prices12.forEach((price) => {
-  if (price < 110) {
-    const newPrice = price * 1.1;
-    console.log(newPrice);
-  }
-});
-
-//* Ödev-4: maaslar dizisinde 4000'den düsük olan maaslara %50 zam yapmak istiyoruz ve bunu ayri dizi olarak saklamak istiyoruz:
-
-const maaslar = [3000, 5000, 4000, 6000, 6500];
-
-const zamliMaaslar = maaslar
-  .filter((maas) => maas < 4000)
-  .map((maas) => maas * 1.5);
-console.log(zamliMaaslar); // [4500]
-
-//* Ödev-5: Maasi 4000'den büyük olanlara %25 zam yaparak sonuclari console'da yazdiralim:
-
-const maaslar1 = [3000, 5000, 4000, 6000, 6500];
-
-maaslar1.forEach((maas, raise) => {
-  if (maas > 4000) {
-    maaslar1[raise] = maas * 1.25;
-  }
-});
-
-console.log(maaslar1);
