@@ -120,3 +120,30 @@ const euroPrices = tlPrices.map((a) => (a / euro).toFixed(2));
 console.log(euroPrices);
 
 console.log(tlPrices);
+
+//* ======================================================
+//*                       FILTER METHOD
+//* ======================================================
+
+//* Örnek: prices array'inde fiyatı 200 TL'den az olanlari ayri bir diziye saklayalim:
+
+const prices = [200, 500, 100, 180];
+
+const yeni2 = prices.filter((a) => a < 200);
+
+console.log(yeni2); //[100, 180]
+console.log(prices); //[200, 500, 100, 180]
+
+prices.filter((a) => a < 200).forEach((a) => console.log(a)); // arrray'den cikararak yazdi
+
+//* Örnek: Asagidaki string'i array'e cevirip bütün kelimelerin harflerini büyütelim:
+
+const text = "Clarusway Online Career IT TraininG School ThankS for time";
+
+text
+  .split(" ") //diziye cevirdik
+  .map((a) => a.toUpperCase()) //her bir elemani büyük harf yaptik
+  .forEach((a) => console.log(a)); //sonuclari console'a yazdirdik
+
+//* Yukarida array'e döndürdügümüz string cümledeki, sadece T ile baslayan kelimelerin ilk harfini kücült, diger harflerini normal birakarak yazdir:
+
