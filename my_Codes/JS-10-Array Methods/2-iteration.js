@@ -147,3 +147,47 @@ text
 
 //* Yukarida array'e döndürdügümüz string cümledeki, sadece T ile baslayan kelimelerin ilk harfini kücült, diger harflerini normal birakarak yazdir:
 
+text
+  .split(" ") // diziye cevirdik
+  .filter((a) => a.startsWith("T")) // Tile baslayanlari dizide tuttuk(filtreledik)
+  .map((a) => a.slice(0, 1).toLowerCase() + a.slice(1)) //her elemanin sadece ilk harfini kücülttük
+  .forEach((a) => console.log(a)); //sonuclari console'a yazdirdik
+
+//* Örnek: n harfiyle biten isimleri tersten yazdırıp yeni bir diziye atın:
+
+const names2 = [
+  "ayca",
+  "kemal",
+  "mustafa",
+  "ayse",
+  "fatih",
+  "halil",
+  "erkan",
+  "umut",
+  "gökçe",
+  "mehmet",
+  "rengin",
+];
+
+const yeniDizi = names2
+  .filter((a) => a.endsWith("n")) //sonu n ile bitenleri dizide tuttuk(filtreledik)
+  .map((a) => a.split("").reverse().join(""));
+
+console.log(yeniDizi); //['nakre', 'nigner']
+
+//* ======================================================
+//*                      REDUCE tek bir eleman döndürür
+//*               reduce(accumulator, currentValue);
+//* ======================================================
+
+//* Örnek: salaries dizisindeki maaşları toplayınız (reduce metodu kullanın):
+
+const salaries = [3000, 5000, 4000, 6000, 7500];
+
+console.log(salaries.reduce((toplam, eleman) => toplam + eleman)); //25500
+
+const total = salaries.reduce((toplam, eleman) => toplam + eleman);
+
+console.log(total); //25500
+
+console.log(salaries);
