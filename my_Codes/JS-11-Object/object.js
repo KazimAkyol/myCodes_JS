@@ -37,3 +37,5 @@ console.log(car1);
 /* --------------------------------------------------*/
 
 //? 2.Constructor metodu ile object olusturma:
+
+//* Sanki bir kalip olusturmus olduk
