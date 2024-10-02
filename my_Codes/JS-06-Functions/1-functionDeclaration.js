@@ -19,3 +19,33 @@
 // 2-function kelimesinin ardindan fonksiyonun ismi verilir.
 // 3-Sonra da bir parantez acilip kapatilir.
 //? Fonksiyonun calismasi icin cagirmak gereklidir. Fonksiyon cagirilmadiginda isleme alinmaz. Bu cagirma islemine invoke ya da call denir.
+
+//! Function Declaration yöntemi ile fonksiyonun tanimlanmasi cagrilmasindan önce veya sonra olabilir.
+
+console.log("******** 1- FUNCTION DECLARATION *********");
+
+//* Örnek-1:
+
+yazdir();
+
+//? fonksiyonun tanimlanmasi:
+
+function yazdir() {
+  console.log("merhaba, nasilsiniz?");
+}
+
+//? call - invoke fonksiyonunu calistirma:
+//yazdir
+
+//* Örnek-2: (parametreli fonksiyon):
+
+function adYazdir(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+adYazdir("kazim", "fatma", "gökhan");
+adYazdir("mehmet", "muhterem");
+
+//* Örnek-3: (parametreli, dönüs degerli-return):
