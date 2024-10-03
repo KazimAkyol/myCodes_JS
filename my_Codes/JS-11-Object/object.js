@@ -39,3 +39,40 @@ console.log(car1);
 //? 2.Constructor metodu ile object olusturma:
 
 //* Sanki bir kalip olusturmus olduk
+function PersonelList(id, ad, maas) {
+    this.id = id;
+    this.ad  = ad;
+    this.maas = maas;
+}
+
+const personal1 = new PersonelList(1001, "Ali", 10000);
+console.log(personal1);
+
+const personal2 = new PersonelList(1002, "Veli", 20000);
+console.log(personal2);
+
+//* Her nesne icin ayri bir kopya olusturulan metotlar, bellek kullanimini arttirabilir.
+
+//! ÖNEMLI !!!
+//? OBJECT LITERAL - En cok kullanacagimiz yöntem:
+
+let personalYapisi = {}; //Bos bir obje olusturmak
+
+console.log(typeof personalYapisi);
+
+//* Objectler icinde farkli veri türlerini barindirabiliriz. String,Number,Boolean,Dizi,Function,Object
+
+let personal = {
+    name: "Hnery",
+    lastName: "Nathan",
+    dateOfBirth: 2001,
+    isMarried: false,
+    workExperience: ["tester", "developer", "team lead"],
+    adress: {
+        city: "London",
+        street: "Baker Street",
+        no: 221,
+        postalCode: 3214511,
+    },
+    
+}
