@@ -154,3 +154,125 @@ console.log(isMarried);
 /* --------------------------------------------------*/
 
 //! Objeler icine kolaylikla yeni deger ekleyebiliriz:
+personal.phoneNumber = "46-789-12-34";
+console.log(personal);
+
+//! Objeleri bir baska obje icine aktarabiliriz:
+const elemanListesi = personal;
+console.log("personal Listesi", personal);
+console.log("Eleman Listesi", elemanListesi);
+
+personal.title = "Full Stack Developer";
+console.log("*******Kopyalama sonrasi*******");
+console.log("personal Listesi", personal);
+console.log("Eleman Listesi", elemanListesi);
+
+//* Shallow copying (sig) kopyalama:
+//Yukaridaki sekilde yapildiginda degisimlerden etkilenir.
+
+/* ------------------------------------------------------------------------*/
+//* Kopyasinin etkilenmesini istemiyorsak - Deep Copy yöntemi kullanilir.
+
+const deepCopyPersonal = JSON.parse(JSON.stringify(personal));
+console.log(deepCopyPersonal);
+personal.salary = 30000;
+console.log("---------------");
+console.log("Personal", personal);
+console.log("deep copy", deepCopyPersonal);
+
+/* -------------------------------------------------------------------------- */
+//*                               OBJECT METHODS                              */
+/* -------------------------------------------------------------------------- */
+
+//? 1.Ic ice (nested) Object Kullanimi
+
+let = workerList = {
+  person1: {
+    name: "Fatma",
+    lastName: "Yilmaz",
+    dateOfBirth: 1999,
+    salary: 50000,
+    job: "developer",
+  },
+  person2: {
+    name: "Gökhan",
+    lastName: "Yilmaz",
+    dateOfBirth: 1999,
+    salary: 40000,
+    job: "developer",
+  },
+  person3: {
+    name: "Kazim",
+    lastName: "Yilmaz",
+    dateOfBirth: 1999,
+    salary: 20000,
+    job: "tester",
+  },
+};
+
+console.log(workerList.person1.name);
+console.log(workerList["person3"].name);
+
+let x = 2;
+console.log(workerList[`person${x}`].name);
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+//*                             // FOR - OF YAPISI                            */
+/* -------------------------------------------------------------------------- */
+
+//* for of
+
+let numberAndLetter = [1, "a", "b", 2, 3, 5, "c", "d"];
+
+for (const x of numberAndLetter) {
+  console.log(x);
+}
+
+// for of sirali olan dizilerde kullanilir ama objectlerde daha komplex bir yapi oldugu icin for-of kullanilmaz.
+
+// for (const x of workerList) {
+//     console.log(x);
+// }
+
+// TypeError: workerList is not iterable hatasi aliriz.
+
+/* -------------------------------------------------------------------------- */
+
+//! Object kendi icinde var olan özelliklerdir.
+// Object.keys
+// Object values
+// Object.entries
+
+// let workerList = {
+//   person1: {
+//     name: "Fatma",
+//     lastName: "Yilmaz",
+//     dateOfBirth: 1999,
+//     salary: 10000,
+//     job: "developer",
+//   },
+//   person2: {
+//     name: "Gökhan",
+//     lastName: "Yilmaz",
+//     dateOfBirth: 1999,
+//     salary: 40000,
+//     job: "developer",
+//   },
+//   person3: {
+//     name: "Kazim",
+//     lastName: "Yilmaz",
+//     dateOfBirth: 1999,
+//     salary: 20000,
+//     job: "tester",
+//   },
+// };
+
+console.log(Object.keys(workerList));
+console.log(Object.values(workerList));
+console.log(Object.entries(workerList));
+
+let newValue = Object.entries(workerList);
+console.log(newValue[2]);
+
+/* -------------------------------------------------------------------------- */
