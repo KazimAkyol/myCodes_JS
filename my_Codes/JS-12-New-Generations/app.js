@@ -207,5 +207,10 @@ const person = {
 };
 
 const { ad, yas, ...geriKalan } = person;
-console.log(yas);
-console.log(geriKalan);
+console.log(yas); //40
+console.log(geriKalan); //{soyad: 'Nut', is: 'Team Lead'}
+
+//! 2-Bir fonksiyonun argumanlarini diziye cevirmek icin kullanilir.
+
+const topla = (a, b, ...kalan) => a + b;
+console.log(topla(1, 5, 7, 9, 3));
