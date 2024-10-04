@@ -51,3 +51,41 @@ const {
 console.log(pro1Brand, pro1Id, pro1Type, pro1Price); //Samsung 987654 Tablet 5000
 
 //? Nested Destructuring
+const insanlar = {
+  kisi1: {
+    kimlikNo: "1234567890",
+    adi: "Ahmet",
+    soyadi: "Can",
+    meslek: "Mimar",
+    maas: 30000,
+  },
+  kisi2: {
+    kimlikNo: "44234567890",
+    adi: "Canan",
+    soyadi: "Can",
+    meslek: "Sosyal Gelisim Uzmani",
+    maas: 25000,
+  },
+};
+
+console.log(insanlar.kisi2.meslek); //Sosyal Gelisim Uzmani
+console.log(insanlar["kisi2"]["meslek"]); //Sosyal Gelisim Uzmani
+
+//? Level-1 Destructuring
+// const { kisi1, kisi2 } = insanlar;
+
+// console.log(kisi1);
+// console.log(kisi1.adi);
+
+//? Level-2 Destructuring
+
+// const { kimlikNo, adi, soyadi, meslek, maas } = kisi1;
+// console.log(kimlikNo, adi, soyadi, meslek, maas);
+
+//? 2 Seviyeli Destructuring
+const {
+  kisi1: { adi, soyadi },
+  kisi2: { adi: kisi2Ad, soyadi: kisi2Soyad },
+} = insanlar;
+
+console.log(adi);
