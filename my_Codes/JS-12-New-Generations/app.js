@@ -137,3 +137,45 @@ team.forEach((person) => {
   console.log("Age3:", person.age);
   console.log("*****************");
 });
+
+//!--- Fonksiyonlarda Destructuring Kullanimi ---
+
+const objGoster = function () {
+  return {
+    name: "Hazel",
+    surname: "Nut",
+    job: "team lead",
+    age: 40,
+  };
+};
+
+console.log(objGoster());
+
+let { name, surname, job, age } = objGoster();
+console.log("Age:", age); //Age: 40
+console.log("Job:", job); //Job: team lead
+
+//? Fonksiyon Parametresi
+
+const data = {
+  id: "123",
+  desc: "This is top secret information",
+  createdTime: "1980",
+};
+
+const printData = (p) => {
+  console.log(`${p.id} - ${p.desc} - ${p.createdTime}`);
+};
+
+const printDataDestr = (p) => {
+  const { id, desc, createdTime } = p;
+  console.log(`${id} - ${desc} - ${createdTime}`);
+};
+
+const printDataAir = ({ id, desc, createdTime }) => {
+  console.log(`{id} - ${desc} -${createdTime}`);
+};
+
+printData(data);
+printDataDestr(data);
+printDataAir(data);
