@@ -275,3 +275,50 @@ const sahislar = {
     drivingLicense: true,
   },
 };
+
+//? JavaScript'te Objeler default olarak iterable degildir.
+//? Ama for in ve for of döngüleri ile itere edilebilirler.
+
+//? Objelerin key ve value'larini okumak icin built-in metodlar vardir.
+//? Bu metodlar aslinda objelerin key ve/veya value'larini bir dizi olarak döndürür.
+
+for (const s in sahislar) {
+  console.log(s);
+  console.log(sahislar[s]);
+  console.log(sahislar[s].salary);
+}
+
+//Kullanisli Object Metodlari
+
+console.log(Object.keys(sahislar)); //? objenin key'leri array olarak döner.
+console.log(Object.values(sahislar)); //? objenin value'lari array olarak döner.
+console.log(Object.values(sahislar.sahis2)); //? obje'nin value'lari array olarak döner.
+console.log(Object.entries(sahislar)); //? objenin key-value cifti array olarak döner.
+console.log(Object.entries(sahislar.sahis1)); //? objenin key-value cifti array olarak döner.
+
+for (const key of Object.keys(sahislar)) {
+  console.log(sahislar[key].salary);
+}
+
+console.log("***************");
+
+for (const v of Object.values(sahislar)) {
+  console.log(v);
+  console.log(v.name);
+}
+
+//! Stack and Heap Örnekleri:
+
+// let a = 5;
+// let b = 10;
+// b = a;
+// a= 22;
+// console.log(`a = ${a} b = ${b}`);
+
+// let c = [1, 2, 3, 4, 5];
+// let d = c;
+
+// d[0] = 9;
+
+// console.log(d);
+// console.log(c);
