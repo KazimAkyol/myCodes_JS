@@ -214,3 +214,64 @@ console.log(geriKalan); //{soyad: 'Nut', is: 'Team Lead'}
 
 const topla = (a, b, ...kalan) => a + b;
 console.log(topla(1, 5, 7, 9, 3));
+
+const toplam = (...sayilar) => {
+  return sayilar.reduce((a, b) => a + b);
+};
+
+console.log("Toplam:", toplam(1, 3, 5, 7, 9));
+//! REST (...) ile non-iterable olan sayilari iterable hale (diziye) cevirmis olduk.
+
+//* =============================================
+//*  SPREAD (...)
+//* =============================================
+
+//? Spread operatoru ise iterables olan  bir elemani bireysel degerler haline getirir.
+
+const havaAraclari = ["ucak", "helikopter", "drone", "fuze"];
+const karaAraclari = ["araba", "bisiklet", "scooter"];
+
+const tasitlar = [havaAraclari, karaAraclari];
+console.log(tasitlar);
+
+const flatTasitlar = [...havaAraclari, ...karaAraclari];
+console.log(flatTasitlar);
+
+//* Örnek:
+
+const cumle = "Uzun ince bir yoldayim";
+const cumleDizisi = [...cumle];
+console.log(cumleDizisi);
+
+//* Örnek:
+
+const numbers = [2, 5, 8, 3, 4];
+console.log(Math.max(...numbers));
+
+//? nested
+const sahislar = {
+  sahis1: {
+    name: "Can",
+    surname: "Canan",
+    dob: "1990",
+    job: "developer",
+    salary: "140000",
+    drivingLicense: true,
+  },
+  sahis2: {
+    name: "Jhon",
+    surname: "Sweet",
+    dob: "1990",
+    job: "tester",
+    salary: "110000",
+    drivingLicense: false,
+  },
+  sahis3: {
+    name: "Steve",
+    surname: "Job",
+    dob: "2000",
+    job: "developer",
+    salary: "90000",
+    drivingLicense: true,
+  },
+};
