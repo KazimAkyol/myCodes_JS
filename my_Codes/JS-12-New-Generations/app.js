@@ -48,4 +48,6 @@ const {
   price: pro1Price,
 } = product1;
 
-console.log(pro1Brand, pro1Id, pro1Type, pro1Price);
+console.log(pro1Brand, pro1Id, pro1Type, pro1Price); //Samsung 987654 Tablet 5000
+
+//? Nested Destructuring
