@@ -179,3 +179,33 @@ const printDataAir = ({ id, desc, createdTime }) => {
 printData(data);
 printDataDestr(data);
 printDataAir(data);
+
+//* ==============================================
+//*  REST (...)
+//* =============================================
+
+//? Rest operatoru kullanici tarafindan girilen degerleri dizi icerisine konumlandirir. Cesitli kullanim alanlari vardir.
+
+//! 1-Bir diziyi veya object'teki bazi degerlerden geri kalanlarini ayri dizi ya da objelere kopyalanmasini saglayabilir.
+
+//? ARRAY
+
+const araclar = ["Kamyon", "Tir", "Kamyonet", "Motosiklet", "Minibüs", "Taksi"];
+const [x, y, z, , ...kalanArac] = araclar;
+console.log(x);
+console.log(y);
+console.log(z);
+console.log(kalanArac);
+
+//? OBJECT
+
+const person = {
+  ad: "Hazel",
+  soyad: "Nut",
+  is: "Team Lead",
+  yas: 40,
+};
+
+const { ad, yas, ...geriKalan } = person;
+console.log(yas);
+console.log(geriKalan);
