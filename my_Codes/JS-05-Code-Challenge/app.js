@@ -175,3 +175,42 @@ if (y % 4 == 0 && y % 100 != 0) {
 
 //! 6) Kullanıcıdan alınan sayıları negatif girilene kadar toplayan ve sonucunu console a yazdıran kodu yazınız:
 
+// let sum = 0;
+
+// while (true) {
+//   let num = +prompt("Lütfen sayi giriniz");
+//   if (num < 0) {
+//     break;
+//   }
+//   sum += num;
+// }
+
+// console.log(`Girilen sayilarin toplami ${sum}`);
+
+//! 7) Sizden 1'den 100'e kadar olan sayilari console'a yazdirmaniz istenmektedir.Ancak 3'ün katlarina gelince 'Fizz', 5'in katlarina gelince 'Buzz' yazacak. Hem 3'ün hem de 5'in katina geldiginde ise 'FizzBuzz' yazdirmaniz istenmektedir:
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
+
+//! 8) Bir sayinin(number) basamak sayisini yazdiran kodu yaziniz:
+
+// let number = +prompt("sayi giriniz");
+
+// let digitCount = 0;
+// while (number !== 0) {
+//   digitCount++;
+//   number = Math.trunc(number / 10);
+// }
+
+// console.log(`sayinin basamak sayisi ${digitCount}`);
+
+//! 9) Kullanicidan alinan n adet kadar olan Fibonacci dizisini aralarinda bosluk olan string sekilde console a yazdiriniz // 0 1 1 2 3 5 8 13
