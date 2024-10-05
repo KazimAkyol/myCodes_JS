@@ -48,7 +48,7 @@ if (sabah) {
 //   ? console.log("Yasiniz 18'den kücüktür.Oy kullanamazsiniz")
 //   : console.log("Yasiniz 18'den büyüktür.Oy kullanabilirsiniz");
 
-//!1/2 girilen yilin yüzyilini veren program 1788 > 18.yüzyil
+//! 1/2 girilen yilin yüzyilini veren program 1788 > 18.yüzyil:
 
 //1788/100
 //17,88
@@ -113,3 +113,65 @@ if (dersNotu < 0 || dersNotu > 100) {
 } else {
   console.log("Harfiniz FF'dir.");
 }
+
+//! 3) Artik yil sorusu:
+
+//? Artık yıl, bir yıldaki günlerin 365 yerine 366 gün olmasına denir. Bu fazladan gün (artık gün), normalde 28 gün olan Subat ayına 29 Şubat'ın eklenmesi ile elde edilir.  Bunun hesaplanması için aşağıdaki algoritma kullanılır.
+
+//? Bir tarih 4 ile tam bölünüp 100 katları ile tam bölünemiyorsa, veya yıl 400 sayısına tam bölünüyorsa artık yıldır. BU iki şartın dışında yılarda şubat ayı 28 gün, artık yıllarda 29 gün olarak belirlenir.
+
+//? Yukarıdaki bilgilere göre bir yılın artık yıl olup olmadığını console a yazdıran conditional statement'i yazınız.
+
+let y = 2040;
+
+if (y % 4 == 0 && y % 100 != 0) {
+  console.log(`${y} artik yildir`);
+} else if (y % 400 == 0) {
+  console.log(`${y} yili artik yildir`);
+} else {
+  console.log(`${y} artik yil degildir`);
+}
+
+//! 4) 1000 ile 2000 arasindaki 13'e bölümünden kalani 3 olan sayilari console a yazdiriniz:
+
+// let sayac = 0;
+
+// for (let i = 1000; i < 2000; i++) {
+//   if (i % 13 == 3) {
+//     console.log(i);
+//     sayac++;
+//   }
+// }
+
+// console.log("kac tane", sayac);
+
+//! 5) Kullanicidan alinan 5 adet sayinin ortalamasini console'a yazdiriniz:
+
+//? for ile
+
+// let sayac = 0;
+// let toplam = 0;
+
+// for (let i = 1; i <= 5; i++) {
+//   let sayi = +prompt("sayi giriniz");
+//   sayac++;
+//   toplam += sayi;
+// }
+
+// console.log(sayac);
+// console.log(toplam / sayac);
+
+//? while ile
+
+// let num = 0;
+
+// let result = 0;
+// while (num < 5) {
+//   let sayi = +prompt("sayo giriniz");
+//   result += sayi;
+//   num++;
+// }
+// console.log(`Girilen ${num} sayinin ortalamasi {result / num} 'tir`);
+
+//! 6) Kullanıcıdan alınan sayıları negatif girilene kadar toplayan ve sonucunu console a yazdıran kodu yazınız:
+
