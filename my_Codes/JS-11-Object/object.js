@@ -320,3 +320,38 @@ for (x in workerList) {
 
 // [{},{},{},{},{},{},{},{},{}]
 
+const team = [
+  {
+    id: 1,
+    name: "Harold",
+    lastName: "Strevy",
+    dateOfBirth: 1998,
+    job: "developer",
+    salary: 10000,
+    drivingLicence: true,
+  },
+  {
+    id: 2,
+    name: "Farold",
+    lastName: "Strevy",
+    dateOfBirth: 2002,
+    salary: 40000,
+    drivingLicence: true,
+  },
+  {
+    id: 3,
+    name: "Katty",
+    lastName: "Perry",
+    dateOfBirth: 1998,
+    job: "developer",
+    salary: 30000,
+    drivingLicence: true,
+  },
+];
+
+//! JSON ile farkli veri türleri barindirilabilir.
+// Dillerden bagimsizdir.
+// Nesnelerin (objelerin) temsil edilmesi icin anahtar-deger ciftlerini kullanir. Bu, verilerin daha iyi organize edilmesini ve iliskilendirilmesini saglar.
+//JSON, veri isleme acisindan hizlidir. Bu nedenle web uygulamalarinda yaygin olarak kullanilir.
+
+//* JSON yeni bir eleman ekleme:

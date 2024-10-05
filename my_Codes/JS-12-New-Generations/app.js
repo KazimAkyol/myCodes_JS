@@ -256,7 +256,7 @@ const sahislar = {
     dob: "1990",
     job: "developer",
     salary: "140000",
-    drivingLicense: true,
+    drivingLicence: true,
   },
   sahis2: {
     name: "Jhon",
@@ -264,7 +264,7 @@ const sahislar = {
     dob: "1990",
     job: "tester",
     salary: "110000",
-    drivingLicense: false,
+    drivingLicence: false,
   },
   sahis3: {
     name: "Steve",
@@ -272,7 +272,7 @@ const sahislar = {
     dob: "2000",
     job: "developer",
     salary: "90000",
-    drivingLicense: true,
+    drivingLicence: true,
   },
 };
 
