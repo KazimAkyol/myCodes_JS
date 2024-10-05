@@ -49,3 +49,47 @@ adYazdir("kazim", "fatma", "gökhan");
 adYazdir("mehmet", "muhterem");
 
 //* Örnek-3: (parametreli, dönüs degerli-return):
+
+function yasHesapla(isim, yil) {
+  console.log(
+    `benim adim ${isim} ve ben ${new Date().getFullYear() - yil} yasindayim`
+  );
+
+  return new Date().getFullYear() - yil;
+}
+
+const mehmet = yasHesapla("mehmet", 1988); //benim adim mehmet ve ben 36 yasindayim
+const muhterem = yasHesapla("muhterem", 1990); //benim adim  muhterem ve ben 34 yasindayim
+const fatma = yasHesapla("fatma", 2000); //benim adim fatma ve ben 24 yasindayim
+
+//console.log(mehmet); //36
+//console.log(fatma); //24
+
+console.log((mehmet + muhterem + fatma) / 3); //31.333
+
+//* Örnek-4: (tek-cift sorgulamasi):
+
+console.log(isEvenOdd(34));
+console.log(isEvenOdd(37));
+
+function isEvenOdd(sayi) {
+  console.log(sayi % 2 == 0 ? "cifttir" : "tektir");
+
+  return sayi % 2 == 0 ? "cifttir" : "tektir";
+}
+
+//* Örnek-5: (arguments keyword'ü ile karsilama):
+
+function sumAll() {
+  //console.log(arguments);
+  //console.log(arguments[0]); // [] array saymaya 0'dan baslae, bu yüzden ilk sayi 23'tür.
+  //console.log(arguments[1]); // array'de 2.sayi 1 numarasina tekabül eder, bu yüzden 2.sayi 34'tür.
+
+  let toplam = 0;
+  for (let i = 0; i < 11; i++) {
+    toplam = toplam + arguments[i];
+  }
+  return `${toplam}, ${arguments[4]}`;
+}
+
+console.log(sumAll(23, 34, 67, 89, 23, 45, 35, 67, 23, 12, 36));
