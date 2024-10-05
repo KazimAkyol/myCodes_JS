@@ -213,4 +213,53 @@ for (let i = 1; i <= 100; i++) {
 
 // console.log(`sayinin basamak sayisi ${digitCount}`);
 
-//! 9) Kullanicidan alinan n adet kadar olan Fibonacci dizisini aralarinda bosluk olan string sekilde console a yazdiriniz // 0 1 1 2 3 5 8 13
+//! 9) Kullanicidan alinan n adet kadar olan Fibonacci dizisini aralarinda bosluk olan string sekilde console a yazdiriniz: // 0 1 1 2 3 5 8 13
+
+// let a = 0;
+// let b = 1;
+// let strfibonacci = "0, 1";
+// let n = +prompt("kac tane fibonacci sayisi istersiniz?");
+
+// for (let i = 0; i < n; i++) {
+//   c = a + b;
+//   strfibonacci += ` ${c}`;
+//   a = b;
+//   b = c;
+// }
+// console.log(strfibonacci);
+
+//! 10) Asagidaki ciktiyi console a yazdiriniz.
+
+// ?      * * * * *
+// ?      * * * * *
+// ?      * * * * *
+// ?      * * * * *
+// ?      * * * * *
+
+let stars = "";
+
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j < 5; j++) {
+    stars += "*";
+  }
+  stars += "\n";
+}
+
+console.log(stars);
+
+//! 11) Asagidaki ciktiyi console a yazdiriniz.
+
+//? 0
+//? 00
+//? 000
+//? 0000
+//? 00000
+//? 000000
+
+for (let i = 0; i < 6; i++) {
+  let row = "";
+  for (let j = 0; j < i; j++) {
+    row += "0";
+  }
+  console.log(row);
+}
