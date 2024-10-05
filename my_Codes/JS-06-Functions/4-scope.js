@@ -1,0 +1,63 @@
+// ? ==========================================================
+// ?                   FONKSİYONLAR-SCOPE
+// ? ==========================================================
+console.log("************ 4- SCOPE *************");
+
+//! Global scope (gökteki yildizlar gibi herkes görebilir)
+
+let first = 5;
+let second = 34;
+let third = 456;
+//let second = 9;
+
+console.log(first, second.third);
+
+const scopeFunction = () => {
+  first = 8;
+
+  let second = 1234; //!function-scope
+
+  let fourth = first + second; //8+1234
+
+  console.log(fourth); //1242
+
+  return second;
+};
+
+console.log(scopeFunction());
+
+console.log(first);
+console.log(second);
+//console.log(fourth); //süslü icinde kaldi
+
+//*********************** */
+
+let number = 11; //!global-scope
+
+const fonksiyon = () => {
+  let number = 56; //!function-scope
+  number++;
+
+  return number;
+};
+
+console.log(number); //11
+
+console.log(fonksiyon()); //57
+
+//! zorlamayla icerideki number'i fonksiyon return'ü sayesinde globaldeki number degiskenine assign ettik
+
+number = fonksiyon(); //global scope'taki number'i function scope'taki number'a esit hale getirdik.
+
+//const number = 157; // Identifier 'number' has already been declared
+
+//* if-for gibi süslüler block-scope
+
+{
+  number++;
+
+  let sayi = 89;
+  let sayi2 = sayi + 12;
+
+  console.log(sayi2); //101
+}

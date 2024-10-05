@@ -43,3 +43,27 @@ console.log(menu());
 const hacimHesapla = (r, h) => Math.PI * r * r * h;
 
 console.log(hacimHesapla(3, 5).toFixed(2));
+
+//* Örnek-4: Girilen n. terimdeki Fibonacci sayisını  yazdiran fonksiyonu döngü ile kodlayiniz. Ve bu n sayısına kadar olan elemanları toplayınız:
+//? FIBONACCI terimleri:  1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+
+const fibonacciNumber = (n) => {
+  let solFibo = 1;
+  let sagFibo = 1;
+  let yeniFibo = 0;
+
+  let toplam = 2;
+
+  for (let i = 1; i <= n - 2; i++) {
+    yeniFibo = solFibo + sagFibo;
+
+    solFibo = sagFibo;
+    sagFibo = yeniFibo;
+
+    toplam = toplam + yeniFibo;
+  }
+  console.log(yeniFibo);
+
+  return toplam;
+};
+console.log(fibonacciNumber);
