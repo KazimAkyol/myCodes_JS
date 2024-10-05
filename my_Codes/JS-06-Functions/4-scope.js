@@ -61,3 +61,25 @@ number = fonksiyon(); //global scope'taki number'i function scope'taki number'a 
 
   console.log(sayi2); //101
 }
+
+console.log(number); //58
+//console.log(sayi2); //süslü icinde olan süslü icinde kalir
+
+//? VAR Datatype
+
+number2 = 100; //! hoisted(number2'ye sonradan type atadim ve type'i her VAR gibi oldu)
+
+var number2 = 123;
+console.log(number2);
+
+var result = "HALLO";
+
+if (number2 == 105) {
+  let result = "HI!"; //! block-scope
+
+  console.log(result);
+} else {
+  result = "SALUT"; //! global'den gelen result
+}
+
+console.log(result); //SALUT
