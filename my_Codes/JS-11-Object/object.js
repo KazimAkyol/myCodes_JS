@@ -276,3 +276,47 @@ let newValue = Object.entries(workerList);
 console.log(newValue[2]);
 
 /* -------------------------------------------------------------------------- */
+
+for (const x of Object.keys(workerList)) {
+  console.log(x);
+}
+
+for (const y of Object.values(workerList)) {
+  console.log(y);
+}
+
+for (const [k, v] of Object.entries(workerList)) {
+  console.log(`${k} degeri icin maas ${v.salary}`);
+}
+
+/* -------------------------------------------------------------------------- */
+
+const devFilter = Object.values(workerList).filter(
+  (p) => p.job === "developer"
+);
+console.log(devFilter);
+
+const devName = Object.values(workerList).filter((p) => p.name[0] === "F");
+console.log(devFilter);
+
+const filterSalary = Object.values(workerList).filter((p) => p.salary > 30000);
+console.log(filterSalary);
+
+/* -------------------------------------------------------------------------- */
+
+//* FOR IN
+
+for (x in workerList) {
+  console.log("for in", x); //sadece key degerlerine ulasiriz
+  console.log(workerList[x].name); // workerList[person1].name
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+//*                   JSON -Javascript Object Notation                        */
+/* -------------------------------------------------------------------------- */
+
+//* JSON ile ic ice obje karistirmayalim!!!
+
+// [{},{},{},{},{},{},{},{},{}]
+
