@@ -185,3 +185,24 @@ function findFactors(num) {
 }
 
 console.log(findFactors(12));
+
+//! 11) Aşağıdaki isterleri sağlayan bir fal programı yazıniz:
+
+//? tellFortune adlı bir işlev yazın:
+//? 4 farklı parametre : jobTitle, geoLocation, partner, numKids.
+//? falınızı ekrana şu şekilde verir: "Gelecekteki mesleğiniz *****'dir. ****'da yaşayacaksınız. **** ile evlenecek ve *** çocuk sahibi olacaksınız"
+
+function tellFortune(jobTitle, geoLocation, partner, numKids) {
+  let future =
+    "You will be a " +
+    jobTitle +
+    " in " +
+    geoLocation +
+    " and married to " +
+    partner +
+    " " +
+    " with " +
+    numKids +
+    " kids.";
+  console.log(future);
+}
