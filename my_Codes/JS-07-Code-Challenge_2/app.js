@@ -206,3 +206,52 @@ function tellFortune(jobTitle, geoLocation, partner, numKids) {
     " kids.";
   console.log(future);
 }
+
+// tellFortune('bball player', 'spain', 'Shaq', 3);
+// tellFortune('stunt double', 'Japan', 'Ryan Gosling', 3000);
+// tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', 0);
+
+//! 12) Mükemmel sayiyi bulan fonksiyonunu yaziniz:
+
+//? Bölen sayilarinin toplami orjinal sayinin 2 katina esitse bu mükemmel sayidir...
+//? 6 = 1, 2, 3, 6 = 12 =6*2
+//? 28 = 1, 2, 4 ,7, 14, 28 = 56 =28*2
+
+const mukSayi = (sayi) => {
+  let toplam = 0;
+
+  for (let i = 2; i <= sayi / 2; i++) {
+    if (sayi % i === 0) {
+      toplam += i;
+    }
+  }
+  toplam += 1 + sayi;
+  //console.log(toplam);
+
+  if (toplam == sayi * 2) {
+    console.log("Mükemmel sayidir...");
+  } else {
+    console.log("Mükemmel sayi degildir...");
+  }
+};
+
+mukSayi(50); //mükemmel sayi degildir.
+mukSayi(28); //mükemmel sayidir.
+
+//! 13) Anapara tutarına dayalı bileşik faizi hesaplamak için bir fonksiyon yazın:
+//* Fonksiyon `compoundInt()`, anapara tutarı, yıllık faiz oranı, yıllık bazda zaman ve faizin birim zamanda kaç kez bileştirileceği olarak n verilen bileşik faiz formülüne dayalı nihai bir tutar döndürür.
+
+function compoundInt(principle, rate, time, n) {
+  var interest = principle * Math.pow(1 + rate / n, n * time);
+  return principle + interest;
+}
+
+console.log(compoundInt(20000, 5, 2, 2)); //3021250
+console.log(compoundInt(150000, 25, 1, 2)); //27487500
+
+//! 14) calculateSupply adında bir fonksiyon yazın:
+// 2 argüman alır: yaş, günlük miktar.
+// hayatın geri kalanı için tüketilen miktarı hesaplar (sabit bir maksimum yaşa göre).
+// sonucu ekrana şu şekilde çıkarır: “X yaşına kadar size yetecek NN'ye ihtiyacınız olacak”
+// Bu fonksiyonu her seferinde farklı değerler girerek üç kez çağırın.
+// Bonus: Günlük miktar için kayan nokta değerlerini kabul edin ve sonucu yuvarlak bir sayıya yuvarlayın.
