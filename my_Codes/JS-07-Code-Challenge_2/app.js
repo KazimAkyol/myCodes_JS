@@ -111,6 +111,77 @@ transmogrifier(3, 4, 2); //144
 
 //! 8) Bir sayiyi tersine cevirecek bir fonksiyon yaziniz:
 //546
-//!1.Yöntem:
+//! 1.Yöntem:
+// function reverseNumber(num) {
+//   var reverse = 0;
+//   while (num != 0) {
+//     reverse = reverse * 10;
+//     reverse = reverse + (num % 10);
+//     num = Math.trunc(num / 10); //virgülden sonraki kismi atmak icin
+//   }
+//   return reverse;
+// }
 
+// console.log(reverseNumber(546)); //645
 
+//! 2.Yöntem:
+
+// let numara = 5441681;
+// console.log(numara);
+// console.log(numara(toString()));
+
+const ters = (sayi) => {
+  let cevir = sayi.toString();
+  let ekle = "";
+  for (let i = cevir.length - 1; i >= 0; i--) {
+    ekle += cevir[i];
+  }
+  return parseInt(ekle);
+};
+
+console.log(ters(654)); //456
+console.log(ters(2024)); //4202
+
+//! 9) 100-1000'e kadar olan sayilarin polindrom olanlarini belirten/yazan program:
+
+function reverseNumber(number) {
+  var reverse = 0;
+  var num = number;
+  while (num != 0) {
+    reverse = reverse * 10;
+    reverse = reverse + (num % 10);
+    num = Math.trunc(num / 10); //virgülden sonraki kismi atmak icin
+  }
+  return reversString === number ? `${number} polindromdur` : null;
+}
+
+for (let i = 100; i < 1000; i++) {
+  let x = reverseNumber(i);
+  x === null ? null : console.log(x);
+}
+
+//! 10) Girilen bir sayinin pozitif bölenlerini bulan bir fonksiyon yaziniz:
+
+function findPositiveDivisors(num) {
+  let result = [];
+
+  for (let i = 1; i <= num; i++) {
+    if (num % i === 0) result.push(i);
+    console.log("result", result);
+  }
+  return result;
+}
+
+console.log(findPositiveDivisors(12)); // output: [1, 2, 3, 4, 6, 12]
+
+function findFactors(num) {
+  const factors = [];
+  for (let i = 1; i <= num; i++) {
+    if (num % i === 0) {
+      factors.push(i);
+    }
+  }
+  return factors;
+}
+
+console.log(findFactors(12));
