@@ -24,4 +24,11 @@ console.log(numbers1.some((num) => num > 80)); //false
 
 //* map(): bir dizi icin bir callback fonksiyon cagirir ve her eleman icin cikan sonuclari bir diziye yazdirir
 //* forEach(): bir dizi icin bir callback fonksiyon cagirir. Geriye bir deger döndürmez
-//* filter():
+//* filter(): bir dizi icin bir callback fonksiyon cagirir ve verilen kosula göre bir deger döndürür
+//* reduce(): dizideki elemanlari toplayarak tek bir degere döndürür
+
+//! 1.Bir dizideki elemanlarin ortalamasini bulan fonksiyon:
+
+const numbers = [34, 56, 56, 87, 90];
+
+// 1.yol
