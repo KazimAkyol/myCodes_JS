@@ -85,3 +85,74 @@ function countWords(newSentence) {
 console.log(countWords(sentence));
 
 console.log(sentence.split(/\s+/));
+
+//! 3.Size bir  cümle verildi. "Clarusway" kelimesini bulmanız ve şuna benzer bir cümle döndürmeniz gerekir:
+//? Clarusway'i bulamıyorsanız, "I can't find Clarusway :(" yazın.
+//? findClarusway("I am finding Clarusway !") ➞ "I found Clarusway at 4!"
+
+test: "I like Clarusway"; // Output : I found at Clarusway at 3!
+test: "I like bootcamps "; // Output  I can't find Clarusway :(
+
+function findClarusway(sentence) {
+  if (sentence.includes("Clarusway")) {
+    return `I found at Clarusway at ${
+      sentence.split(" ").indexOf("Clarusway") + 1
+    }`;
+  } else {
+    return "Ican't find Clarusway";
+  }
+}
+
+let sentence1 = "I likes Clarusway";
+
+console.log(findClarusway(sentence1));
+
+console.log(sentence1.split(" ").indexOf("Clarusway"));
+
+//! 4.Bir öğe dizisini alan, tüm yinelenen öğeleri kaldıran ve eski diziyle aynı sırada yeni bir dizi döndüren bir fonksiyon oluşturan program:
+
+// removeDuplicated([1,0,1,0,1]) // Output [1,0]
+// removeDuplicated(["the","small","cat","the","cat"]) // ouput["the","small","cat"]
+
+function removeDuplicated(arr) {
+  const duplicatedArray = [];
+  for (const i of arr) {
+    if (!duplicatedArray.includes(i)) {
+      duplicatedArray.push(i);
+    }
+  }
+  return duplicatedArray;
+}
+
+console.log(removeDuplicated([1, 0, 1, 0, 1])); // [1, 0]
+console.log(removeDuplicated(["the", "small", "cat", "the", "cat"])); // ['the', 'small', 'cat']
+
+//! 5.Bir dizide ilk harfi A ile baslayan yeni bir diziye alan fonksiyon:
+const words = ["Apple", "Banana", "Orange", "Avocado", "Grape", "Apricot"];
+
+function filterWords(arr) {
+  const newArr = arr.filter((word) => word[0] === "A");
+  return newArr;
+}
+
+console.log(filterWords(words)); // ['Apple', 'Avocado', 'Apricot']
+
+//! 6.Bir dizide verilen  maaşlara %10 zam yapılacak ama hala 20000 altında kalanlara ek ödeme planlanacak:
+//* a.Kaç kişi zam olsa bile 20000 altında kalıyor?
+let salaries = [18000, 13000, 17000, 24000, 18500, 21000, 19300];
+
+let belowUnder20K = salaries.filter((salary) => salary * 1.1 < 20000);
+console.log(belowUnder20K); // [18000, 13000, 17000]
+
+//* b.Maasi zamli halde 20000'in altinda kalanlara patronumuz belki ir güzellik yapar. 20000' altinda kalanlari 20000'e tamamlayabilir ama ne kadar bütce ayirmali?
+
+let addBudget = salaries.map((salary) => {
+  let increased = salary * 1.1;
+  return increased < 20000 ? 20000 - increased : 0;
+});
+
+console.log(addBudget);
+
+let totalPayment = addBudget.reduce((sum, payment) => sum + payment, 0);
+
+console.log(totalPayment);
