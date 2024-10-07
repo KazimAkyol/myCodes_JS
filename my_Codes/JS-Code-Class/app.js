@@ -32,3 +32,56 @@ console.log(numbers1.some((num) => num > 80)); //false
 const numbers = [34, 56, 56, 87, 90];
 
 // 1.yol
+
+let toplam = 0;
+const ortalama = () => {
+  for (let i = 0; i < numbers.length; i++) {
+    toplam += numbers[i];
+  }
+  return toplam;
+};
+
+console.log(ortalama(numbers) / numbers.length); //64.6
+
+// 2.yol
+
+console.log(numbers.reduce((toplam, eleman) => toplam + eleman) / 5); //64.6
+
+// 3.yol
+
+const sum = numbers.reduce((a, b) => {
+  console.log("a", a);
+  console.log("b", b);
+  return a + b;
+}, 0); // ilk index'e 0 verilerek a=0 ile baslandi
+
+const result = sum / numbers.length;
+
+console.log(result); //64.6
+
+//! 2.Girilen bir cümledeki kelime sayisini bulan fonsiyon:
+
+let sentence = "Merhaba           Cohort DE-10TR";
+
+// function kelimeSayisi(sentence) {
+//   //Cümleyi bosluklara göre bölüp kelimeleri sayar
+//   let kelimeler = sentence.trim().split(/\s+/);
+//   return kelimeler.length;
+// }
+
+// console.log(kelimeSayisi(sentence)); //3
+
+function countWords(newSentence) {
+  //const sumOfnewCount = newSentence.split(" ").length;
+
+  // Birden fazla bosluk iceriyorsa
+  const sumLetter = newSentence.split(/\s+/).length;
+
+  return sumLetter;
+
+  //return sumOfnewCount;
+}
+
+console.log(countWords(sentence));
+
+console.log(sentence.split(/\s+/));
