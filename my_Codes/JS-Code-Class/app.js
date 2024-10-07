@@ -156,3 +156,9 @@ console.log(addBudget);
 let totalPayment = addBudget.reduce((sum, payment) => sum + payment, 0);
 
 console.log(totalPayment);
+
+//! 7.Bu şekilde girilen stringi "altı,bir,iki,dört,beş,üç,yedi,sekiz,dokuz"
+//! 612453789 bu hale dönüştüren program:
+
+let string = "alti,bir,iki,dört,beş,üç,yedi,sekiz,dokuz";
+let stringNumber = [];
