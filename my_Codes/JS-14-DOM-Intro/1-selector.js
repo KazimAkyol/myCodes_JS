@@ -25,7 +25,7 @@ paragraf.width = "300px";
 //*======================================================
 //! tag ismiyle çağırıyoruz,aynı tag'den çok olacağı için index'le hangisini seçtiğimizi belirtiyoruz (HTMLCollection- Array özellikleri gösterir)
 
-const resim = document.getElementById("img");
+const resim = document.getElementsByTagName("img");
 console.log(resim); // HTMLCollection
 
 resim[0].style.width = "300px";
@@ -54,4 +54,22 @@ for (let i = 0; i < 2; i++) {
   baslik[i].style.textAlign = "center";
 }
 
-baslik[0].innerHTML = 
+baslik[0].innerHTML =
+  " H1'in ici <a href ='https://clarsuway.com/'>DOM COK GÜZEL</a>";
+
+baslik[1].textContent = "HALLO";
+
+//* sadece içerik değişecekse textContent tercih edilir, ama innerHTML de etiketi değiştirebildiği gibi, sadece içeriği de değiştirebilir
+
+//* ======================================================
+//*                  QUERYSELECTOR,QUERYSELECTORALL
+//*======================================================
+
+document.querySelector("title").textContent = "DOM MANIPULASYON 💖"; //! SORUN NE???
+
+document.querySelector("#badi").style.backgroundImage =
+  "linear-gradient(green,pink)";
+
+document.querySelector(".HIKI").style.color = "pink";
+
+console.log(document.querySelector("p"));
