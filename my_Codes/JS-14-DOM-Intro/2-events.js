@@ -34,3 +34,31 @@ bir.ondblclick = () => {
   bir.src = "./img/bir.jpeg";
   iki.src = "./img/iki.webp";
 };
+
+//* example-3:
+
+const button = document.querySelector("#btn");
+
+button.onclick = () => {
+  button.textContent = "TIKLANDI";
+
+  badi.style.background = "aqua";
+
+  document.querySelector("#par1").style.fontSize = "50px";
+};
+
+//? METHOD-2 (sadece JAVASCRIPT'te yazilir - addEventListener()) 2.yol
+
+button.addEventListener("click", () => {
+  button.textContent = "TIKLANDI";
+
+  badi.style.background = "aqua";
+
+  document.querySelector("#par1").style.fontSize = "50px";
+});
+
+//* example-4: (Mouse Over, Mouse Out)
+
+//? METHOD-3 (HTML-INLINE)
+
+// kodlari html sayfasinda
