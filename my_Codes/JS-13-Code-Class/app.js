@@ -162,3 +162,25 @@ console.log(totalPayment);
 
 let string = "alti,bir,iki,dört,beş,üç,yedi,sekiz,dokuz";
 let stringNumber = [];
+
+const splitNumber = () => {
+  let newString = string.split(",");
+  console.log(newString);
+
+  for (let i = 0; i < newString.length; i++) {
+    if (newString[i] === "bir") stringNumber.push(1);
+    else if (newString[i] === "iki") stringNumber.push(2);
+    else if (newString[i] === "uc") stringNumber.push(3);
+    else if (newString[i] === "dört") stringNumber.push(4);
+    else if (newString[i] === "bes") stringNumber.push(5);
+    else if (newString[i] === "alti") stringNumber.push(6);
+    else if (newString[i] === "yedi") stringNumber.push(7);
+    else if (newString[i] === "sekiz") stringNumber.push(8);
+    else stringNumber.push(9);
+  }
+  return stringNumber.join("");
+};
+
+console.log(splitNumber(string));
+
+//! 8.Bir dizi icindeki sayilari asal olanlarini filtreleyen bir fonksiyonu olusturun: (filter ile yapilmasi önerilen)

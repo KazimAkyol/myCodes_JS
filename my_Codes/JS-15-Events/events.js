@@ -15,5 +15,5 @@ document.querySelector(".baglat").onclick = () => {
 //! konus butonuna tiklandiginda:
 
 document.querySelector(".btn-outline-danger").onclick = () => {
-  resim, (src = "./image/telfirlat.gif");
+  resim.src = "./image/telfirlat.gif";
 };
