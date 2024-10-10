@@ -131,3 +131,30 @@ section.modal-card {
   justify-content: center;
   color: white;
 }
+
+article.modal {
+  background-color: var(--red);
+  text-align: center;
+  padding: 2rem 3rem;
+  width: 500px;
+  max-width: 100%;
+  font-size: 1.5rem;
+  border-radius: 20px;
+}
+
+.modal button {
+  font-family: var(--ff-comfortaa);
+  font-size: 1.3rem;
+  color: var(--red);
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  transform: translate(3px, 0px);
+  transition: all 0.5s;
+  background-color: var(--black);
+}
