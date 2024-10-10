@@ -5,9 +5,9 @@ console.log(rastgeleSayi);
 let mesaj = document.querySelector(".msg");
 let tahmin = document.querySelector(".guess");
 
-//! her check butonuna basinca olacaklar:
+//! her check butonuna basınca olacaklar:
 
-document.querySelector("check").onclick = () => {
+document.querySelector(".check").onclick = () => {
   if (tahmin.value == rastgeleSayi) {
     document.querySelector("body").style.backgroundColor = "green";
 
@@ -21,24 +21,25 @@ document.querySelector("check").onclick = () => {
   }
 };
 
-//! soru isareti kutusuna tiklandiginda yeni yarismaci icin sayfayi hazirla:
+//! soru işareti kutusuna tıklandığında yeni yarışmacı için sayfayı hazırla:
 
 document.querySelector(".number").onclick = () => {
-  //* bilgisayar yeni bir sayi tutsun
+  //* bilgisayar yeni bir sayı tutsun
   rastgeleSayi = Math.ceil(Math.random() * 20);
 
-  //* body'nin rengi turuncu olsun
+  //* body nin rengi kirmizi olsun
   document.querySelector("body").style.backgroundColor = "red";
 
   //* tahmin beliren kutuda tekrar ? olsun
+
   document.querySelector(".number").textContent = "?";
 
-  //* mesaj kisminda "oyun yeni oyuncu icin tekrar basliyor" yazsin
+  //* mesaj kısmında "oyun yeni oyuncu için tekrar başlıyor" yazsın
 
-  mesaj.textContent = "oyun yeni oyuncu icin tekrar basliyor";
+  mesaj.textContent = "oyun yeni oyuncu için tekrar başliyor";
 };
 
-//! enter'a basilinca check butonuna basilmis gibi calissin:
+//! enter'a basılınca check butonuna basılmış gibi çalışsın:
 
 tahmin.onkeydown = (tus) => {
   console.log(tus);
@@ -49,4 +50,3 @@ tahmin.onkeydown = (tus) => {
     document.querySelector(".check").click();
   }
 };
-
