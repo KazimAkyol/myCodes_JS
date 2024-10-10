@@ -1,0 +1,38 @@
+/* @import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"); */
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P:regular);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  height: 300px;
+  /* border-bottom: 7px solid #eee; */
+}
+
+h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+}
+
+body {
+  font-family: "Press Start 2P";
+  color: white;
+  border-color: tomato;
+}
+
+.between {
+  /* position: absolute; */
+  text-align: right;
+  margin-top: 20px;
+  /* top: 20px; */
+  right: 15px;
+}
+
+.btn {}
