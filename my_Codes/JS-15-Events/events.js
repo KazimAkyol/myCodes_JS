@@ -48,4 +48,42 @@ resim.addEventListener("mouseout", () => {
   //document.querySelector(".ses2").play();
 });
 
-//! klavyeden 
+//! klavyeden input'a veri girisi yapilirken, checked'in tikli olmasina bagli olarak, elimizi klavyeden cektigimizde olacaklar
+
+const textInput = document.querySelector("#textbox");
+const checkInput = document.querySelector("#checkbox");
+
+textInput.onkeyup = () => {
+  // checked=metodu checkbox input'un tikli olup olmadigini kontrol eder, tiklanmissa true döndürür
+  if (checkInput.checked) {
+    //console.log(textInput.value);
+    textInput.value = textInput.value.toUpperCase();
+  } else {
+    textInput.value = textInput.value.toLowerCase();
+  }
+  //input'a veri girisi yaptigimizda, kücük tikliyse benim büyük input'a girdigim harfleri büyüt, aksi durumda kücült
+};
+
+//! listemin basina "Programlama Dilleri" h1 etiketi ekleme
+
+//? HTML'de h1 etiketi olusturmak
+const baslik = document.createElement("h1");
+
+{
+  /* <h1></h1> */
+}
+
+//? h1 elemeti icin olusturdugum text'i h1'e child yapalim
+
+baslik.appendChild(yazi);
+
+{
+  /* <h1 class="baslik2">Programlama Dilleri</h1> */
+}
+
+//? listemin üstündeki div'in sonrasina ekleyelim
+
+document.querySelector("main").after(baslik);
+
+//!  "append" metodu ile seçtiğimiz HTML etiketi bitmeden önceki son kısma ekleme yapabiliriz (<div>merhaba -buraya-  </div>).  "prepend" metodu ile seçtiğimiz HTML etiketi başladıktan sonraki ilk kısma ekleme yapabiliriz  (<div> -buraya-  merhaba   </div>).  "after" metodu ile ile seçtiğimiz HTML etiketi bittikten sonraki ilk kısma ekleme yapabiliriz (<div> merhaba </div>  -buraya-).
+//! *******kısayol**********
