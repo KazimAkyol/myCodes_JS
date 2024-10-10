@@ -125,4 +125,46 @@ const openModal = () => {
   }
 };
 
+const topScoreCheck = () => {
+  console.log("topscore kontrol edildi");
+};
 
+//! Local storage veri yazma - okuma
+
+localStorage.setItem("highScore", 5); //? veri yazma
+console.log(localStorage.getItem("highScore")); //? veri okuma
+
+// console.log(localStorage.getItem("highScore"));
+
+// let storagedscore = localStorage.setItem("highScore", 100);
+
+// if (storagedscore) {
+// } else {
+// }
+
+//! Ilkel Yöntemler
+
+// const rockImg = document.getElementById("rock");
+// const paperImg = document.getElementById("paper");
+// const scissorImg = document.getElementById("scissor");
+
+// rockImg.addEventListener("click", () => {
+//     userSelectImg.src = "./assets/rock.png";
+//     userSelectImg.alt = "rock";
+//     yourChoiseDiv.appendChild(userSelectImg);
+
+//     //innerHTML
+//     //yourChoiseDiv.innerHTML = `<img src = "./assets/rock.png">`
+//   });
+
+//   paperImg.addEventListener("click", () => {
+//     userSelectImg.src = "./assets/paper.png";
+//     userSelectImg.alt = "paper";
+//     yourChoiseDiv.appendChild(userSelectImg);
+//   });
+
+//   scissorImg.addEventListener("click", () => {
+//     userSelectImg.src = "./assets/scissor.png";
+//     userSelectImg.alt = "scissor";
+//     yourChoiseDiv.appendChild(userSelectImg);
+//   });
