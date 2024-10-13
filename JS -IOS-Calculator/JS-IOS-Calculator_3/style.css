@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 25px;
+}
+
+.calculator {
+  background: black;
+  border-radius: 50px;
+  color: white;
+  height: 1218px;
+  padding: 20px;
+  position: relative;
+  width: 563px;
+}
+
+.top-container {
+  display: flex;
+  height: 250px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.value {
+  font-size: 130px;
+  font-weight: 300;
+  height: 158px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: right;
+}
