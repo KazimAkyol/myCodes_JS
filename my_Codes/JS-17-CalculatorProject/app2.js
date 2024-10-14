@@ -124,4 +124,30 @@ const hesapla = () => {
   islem = "";
 };
 
+//? AC butonuna basildiginda
+document.querySelector(".ac").onclick = () => {
+  ustEkranSayi = "";
+  altEkranSayi = "";
+  islem = "";
+  updateEkran();
+};
 
+//? PM (+-) butonuna basildiginda
+document.querySelector(".pm").onclick = () => {
+  //* ekranda sayi yokken PM'e basilmasin
+
+  if (altEkranSayi !== "") {
+    altEkranSayi = altEkranSayi * -1;
+  }
+  updateEkran();
+};
+
+//? percent (%) butonuna basildiginda
+document.querySelector(".percent").onclick = () => {
+  //* ekranda sayi yokken percent'e basilmasin
+
+  if (altEkranSayi !== "") {
+    altEkranSayi = altEkranSayi / 100;
+    updateEkran();
+  }
+};
