@@ -311,3 +311,97 @@ let msg = url.includes("https")
   ? "Bu site güvenlidir"
   : "bu site güvenli degildir";
 console.log(msg); // Bu site güvenlidir
+
+// *=========================================================
+// *               indexOf
+// *=========================================================
+
+//? indexOf (aranacak metin, konum) Bir karakter yada karakter grubunun kaçıncı sırada olduğunu yani index numarasını verir. Eğer o karakter yoksa olmadığını -1 değeri vererek gösterir. Büyük küçük harfe duyarlıdır. Sadece ilk gördüğünün index numarasını verir.
+
+console.log(cumle.indexOf("be")); // 3
+console.log(cumle.indexOf("The")); // -1
+//* parantez icinde yazilan/aratilan karakter yoksa -1 döndürür
+console.log(cumle.lastIndexOf("be")); // 16
+
+// *=========================================================
+// *               search
+// *=========================================================
+
+//? search() bir string icindeki aranan elemanin ilk index numarasini yazar. Bulamzsa -1 döndürür.
+//* Büyük kücük harfe duyarlidir.
+console.log(cumle.search("be")); // 3
+
+//!REGEX - regular expression
+
+// Regex regular expression denir. Bunların yazım stili / işaretiyledir.
+
+// Flags Kullanımı
+// Düzenli ifadelerde çeşitli bayraklar kullanarak aramayı değiştirebiliriz:
+
+// g : Global arama
+// i : Büyük/küçük harf duyarsız arama
+
+let variable = "Kücük";
+
+console.log(variable.search(/U/)); // -1
+
+// [A-Z] , [a-z] , [0-9]
+let cumle2 = "to be or not To be, Thats is The question";
+console.log(variable.search(/[A-Z]/)); // 0
+console.log(variable.search(/[a-z]/)); // 2
+console.log(cumle2.search(/[A-Z]/)); // 13
+console.log(cumle2.search(/[a-z]/)); // 0
+console.log(cumle2.search(/[0-9]/)); // -1
+console.log(cumle2.search(/[.]/)); // -1
+
+// ^ olmayan
+
+console.log(variable.search(/[^A-Z]/)); // 1
+
+// *=========================================================
+// *               match
+// *=========================================================
+
+//? match metodu, bir dizi icindeki bir düzenli ifadeye (Regex) uyari kisimlari bulur ve bir dizi olarak döner.
+//* Bir dizi döndürür.
+
+let phone = "My phone is 123-456-7890";
+
+let result = phone.match(/\d/);
+console.log(result);
+
+let text3 = "Contact us at supoort@example.com or sales@example.com";
+let emailPattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
+let emails = text3.match(emailPattern);
+console.log(emails);
+
+// *=========================================================
+// *               startsWith(), endsWith() -- case sensitive
+// *=========================================================
+//* startsWith :.. ile başlıyormu (True , false)
+//* endsWith :.. ile başlıyormu (True , false)
+
+console.log(phone.startsWith("My")); //true
+console.log(phone.endsWith("890")); //true
+
+//! String'de Degisiklik Yapma
+
+// *=========================================================
+// *               Replace -immutable
+// *=========================================================
+
+let text5 = "Hello World, How are you? World";
+let newText = text5.replace("World", "JavaScript");
+console.log(newText); //Hello JavaScript, How are you? World
+console.log(text5.replaceAll("World", "JavaScript")); //Hello JavaScript, How are you? JavaScript
+
+// *=========================================================
+// *               Trim
+// *=========================================================
+
+//? bas ve sondaki bosluklari kaldirmak icin => trim
+
+let metin2 = " Clarusway";
+console.log(metin2);
+let metin3 = metin2.trim();
+console.log(metin3);
