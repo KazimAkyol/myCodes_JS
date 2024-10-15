@@ -187,3 +187,127 @@ console.log(`${str5}
 //* str.split(seperator)
 //* separator : ayraç
 //* Parçaladığı elemanları bir diziye aktarır.
+
+const metin1 = "Clarusway IT Bootcamp DE10";
+console.log(metin1.split(" "));
+console.log(metin1); // Clarusway IT Bootcamp DE10
+
+let parcalanmisMetin = metin1.split(" ");
+console.log(parcalanmisMetin);
+console.log(parcalanmisMetin[2]); // Bootcamp
+
+for (let i = 0; i < parcalanmisMetin.length; i++) {
+  if (parcalanmisMetin[i] === "IT") {
+    console.log("Bu cümle IT kelimesi iceriyor"); // Bu cümle IT kelimesi iceriyor
+  }
+  //console.log(parcalanmisMetin[i]);
+}
+
+//* Cümleyi harf harf parcalamak icin
+console.log(metin1.split("")); // tirnak icerisinde bosluk birakilmadigi icin yazilan kelimeleri harf harf console'a yazdirir.
+
+//! Verilen tarih bilgisini gün/ay/yil olarak ayirma:
+
+let date = "27.09.2024";
+let newDate = date.split(".");
+console.log(newDate);
+let gun = newDate[0];
+let ay = newDate[1];
+let yil = newDate[2];
+
+console.log("gün", gun); // gün 27
+console.log("ay", ay); // ay 09
+console.log("yil", yil); // yil 2024
+
+let months =
+  "Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec";
+
+let newMonth = months.split(" / ");
+console.log(newMonth); // ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+/* -------------------------------------------------------------------------- */
+/*                               //? Join metodu                              */
+/* -------------------------------------------------------------------------- */
+//* String metodu degildir.
+//* Javascript dilinde join metodu, bir dizi elemani string olarak birlsetirir. Join metodu dizi (array) olarak bunu virgül gibi bir karakter ile ayirarak string'e dönüstürür.
+
+console.log(newMonth.join("-")); // Jan-Feb-Mar-Apr-May-Jun-Jul-Aug-Sep-Oct-Nov-Dec
+
+/* -------------------------------------------------------------------------- */
+//?                               Reverse Metodu                              */
+/* -------------------------------------------------------------------------- */
+
+//* String metodu degildir.
+//* Reverse metodu ile bir diziyi tersine cevirebilmekteyiz. Dizi icerisindeki ilk degeri son, son degeri ise ilk siraya seklinde siralayabilmekteyiz.
+
+//! Bir kelimeyi tersten yazdiran program:
+
+let kelime1 = "Merhaba";
+
+console.log(kelime1.split("").reverse().join("")); // abahreM
+
+//! Polindrom:
+let kelime2 = "madam";
+
+let mesaj =
+  kelime2 === kelime2.split("").reverse().join("")
+    ? "Polindromdur"
+    : "Polindrom degildir";
+
+console.log(mesaj); // Polindromdur
+
+// *=========================================================
+// *               Slice
+// *=========================================================
+
+//! Slice Metodu
+//? String icinde bir bölümü almak icin kullanilir.
+//* Slice (baslangic index numarasi, bitis index numarasi(bu numara dahil degildir))
+
+let sentence = "Merhaba Cohort DE-10";
+console.log(sentence.slice(8, 14)); // Cohort
+console.log(sentence.slice(8)); // Cohort DE-10
+
+console.log(sentence.slice(-5)); // DE-10
+console.log(sentence.slice(-12, -6)); // Cohort
+
+// *=========================================================
+// *               substring
+// *=========================================================
+
+//! substring(baslangic index numarasi, bitis indey numarasi)
+//* Slice'dan farki negatif sayi kullanilmaz.
+
+console.log(sentence.substring(8, 14)); // Cohort
+
+// *=========================================================
+// *               substr
+// *=========================================================
+
+//! substr(baslangic index numarasi, kac adet karakter alinacagi)
+
+console.log(sentence.substr(15, 2)); // DE
+
+/* -------------------------------------------------------------------------- */
+/*                      //!String içinde arama işlemleri                      */
+/* -------------------------------------------------------------------------- */
+//* includes, indexOf, search ,match  metodlarını kullanabiliriz.
+
+// *=========================================================
+// *               includes
+// *=========================================================
+//? includes()   ... yı içeriyor mu -> true yada false bir değer döndürür.
+//? caseSensitive bir özelliktir.
+
+let cumle = "to be or not To be, Thats is the question";
+console.log(cumle.toUpperCase().includes("TO BE")); // true
+
+//! Bir site adresi güvenli mi degil mi?
+//! https: s means secure
+
+let url = "https://clarusway.com/";
+
+let msg = url.includes("https")
+  ? "Bu site güvenlidir"
+  : "bu site güvenli degildir";
+console.log(msg); // Bu site güvenlidir
