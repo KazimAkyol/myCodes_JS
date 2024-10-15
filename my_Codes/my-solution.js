@@ -51,3 +51,18 @@ maaslar1.forEach((maas, raise) => {
 });
 
 console.log(maaslar1); //[3000, 6250, 4000, 7500, 8125]
+
+
+//* js'den
+
+//! Functions
+
+function arttir() {
+    var sonuc = document.getElementById("sonuc");
+    sonuc.value = Number(sonuc.value) + 1;
+  }
+  
+  function azalt() {
+    var sonuc = document.getElementById("sonuc");
+    sonuc.value = Number(sonuc.value) - 1;
+  }
