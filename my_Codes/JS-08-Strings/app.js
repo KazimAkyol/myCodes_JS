@@ -74,3 +74,116 @@ console.log(kelime); // Clarusway
 //* toUpperCase()	    Converts a string to uppercase letters.
 //* trim()	            Removes whitespace from both ends of a string.
 //* valueOf()	        Returns the primitive value of a String object.
+
+// *=========================================================
+// *               lenght - Property
+// *=========================================================
+
+//? lenght => Bir string'in bosluklarda dahil kac karakterden olustugunu verir.
+
+const metin = "Clarusway🚗";
+console.log(metin.length); // 11
+
+//* Emojiler 2 karakter uzunlugundadir.
+
+for (let i = 0; i <= metin.length - 1; i++) {
+  console.log(metin[i]);
+}
+
+let emoji = "🚗";
+console.log(emoji.length); // 2
+
+//! ************ STRING METHODS ************
+//* String metodlari () kullanilir. (Arka planda fonksiyonlardir.)
+//? Chaining yani zincirleme olarak birden fazla metod birlikte kullanilabilir.
+
+// *=========================================================
+// *   toLowerCase() toUpperCase() immutable=değiştirmez
+// *=========================================================
+
+//? Karakterleri büyük harfe dönüstürme => .toUpperCase()
+
+console.log(metin.toUpperCase()); // CLARUSWAY🚗
+console.log(metin); // Clarusway🚗
+//* Degisim gecicidir. Tamamen degistirmiyor, degistirip kaydetmek istiyorsak yeni bir degere atamaliyiz.
+let yeniMetin = metin.toUpperCase();
+console.log(yeniMetin); // CLARUSWAY🚗
+
+//? Karakterleri kücük harfe dönüstürme => .toLowerCase()
+
+console.log(yeniMetin.toLowerCase()); // clarusway🚗
+let yeniMetin2 = yeniMetin.toLowerCase();
+console.log(yeniMetin2); // clarusway🚗
+
+/* -------------------------------------------------------------------------- */
+/*                      //! String Bİrleştirme yöntemleri                     */
+/* -------------------------------------------------------------------------- */
+
+//* + ile birlestirme
+//* concat ile birlestirme
+//* Template Literal (``) ile baglama
+
+let text1 = "Merhaba";
+let text2 = "Javascript";
+
+console.log(text1 + " " + text2); // Merhaba Javascript
+
+let text = "Merhaba";
+
+text += "clarusway";
+console.log(text); // Merhabaclarusway
+
+// let a = 5;
+// let b = 4;
+
+// a += b;
+// console.log(a);
+
+// *=========================================================
+// *               concat() immutable=değiştirmez
+// *=========================================================
+
+//? concatanation
+
+const s1 = "Mola Saati";
+const s2 = " yaklasiyor";
+
+console.log(s1.concat(s2)); // Mola Saati yaklasiyor
+console.log(s1);
+console.log(s2);
+
+let newStr = s1.concat(s2);
+console.log(newStr); // Mola Saati yaklasiyor
+
+// *=========================================================
+// *               Template Literals
+// *=========================================================
+
+//* ES6 ile tanıtılan bu yöntem, backtick işareti (``) kullanarak string birleştirmeyi kolaylaştırır ve değişkenleri doğrudan string içinde kullanmanıza olanak tanır.
+
+let str5 = "Merhaba";
+let str6 = "Dünya";
+
+console.log("Merhaba" + "Dünya"); // MerhabaDünya
+console.log(`${str5} ${str6}`); // Merhaba Dünya
+
+console.log(`${str5} 
+
+    ${str6} 
+    
+    "Nasilsin?"`); // seklinde yazilir
+
+//! String Parcalama Metodlari
+
+//* split()
+//* substring()
+//* substr()
+//* slice()
+
+// *=========================================================
+// *                 split() immutable
+// *=========================================================
+//* Stringi belirtilen şekilde parçalara ayırır ve parçalarını bir diziye aktarır
+//* str.split(seperator)
+//* separator : ayraç
+//* Parçaladığı elemanları bir diziye aktarır.
