@@ -8,8 +8,8 @@ const vergi = 0.18;
 
 let sepettekiler = [
   { name: "Vintage Backpack", price: 34.99, adet: 1, img: "./img/photo1.png" },
-  { name: "Levi Shoes", price: 40.99, adet: 1, img: "./img/photo2.png" },
-  { name: "Antique Clock", price: 69.99, adet: 1, img: "./img/photo3.jpg" },
+  { name: "Levi Shoes", price: 54.99, adet: 1, img: "./img/photo2.png" },
+  { name: "Antique Clock", price: 94.99, adet: 1, img: "./img/photo3.jpg" },
 ];
 
 sepettekiler.forEach((urun) => {
@@ -28,7 +28,9 @@ sepettekiler.forEach((urun) => {
         
         <div class="ürün-price">
             <p class="text-warning h2">$
-                <span class="indirim-price">${(price * 0.7).toFixed(2)} </span>
+                <span class="indirim-price">${(price * 0.789).toFixed(
+                  2
+                )} </span>
                     <span class="h5 text-dark text-decoration-line-through">${price}</span>
                 </p>
                 </div>
@@ -56,7 +58,7 @@ sepettekiler.forEach((urun) => {
                 <div class="mt-2">
                 Ürün Toplam: $<span class="ürün-toplam">${(
                   price *
-                  0.7 *
+                  0.789 *
                   adet
                 ).toFixed(2)} </span>
         </div>
