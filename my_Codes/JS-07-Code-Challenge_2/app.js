@@ -255,3 +255,18 @@ console.log(compoundInt(150000, 25, 1, 2)); //27487500
 // sonucu ekrana şu şekilde çıkarır: “X yaşına kadar size yetecek NN'ye ihtiyacınız olacak”
 // Bu fonksiyonu her seferinde farklı değerler girerek üç kez çağırın.
 // Bonus: Günlük miktar için kayan nokta değerlerini kabul edin ve sonucu yuvarlak bir sayıya yuvarlayın.
+
+function calculateSupply(age, numPerDay) {
+  var maxAge = 100;
+  var totalNeeded = numPerDay * 365 * (maxAge - age);
+  var message =
+    "You will need " +
+    totalNeeded +
+    " cups of tea to last you until the ripe old age of " +
+    maxAge;
+  console.log(message);
+}
+
+calculateSupply(28, 36); //946080
+calculateSupply(28, 2.5); //65700
+calculateSupply(28, 400); //10512000
