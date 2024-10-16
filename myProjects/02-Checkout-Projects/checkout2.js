@@ -134,3 +134,43 @@ document.querySelectorAll(".adet-controller").forEach((kutu) => {
     }
   };
 });
+
+//! ödenecek tutari hesaplayan fonksiyon
+
+function hesaplaCardTotal() {
+  const urunToplam = document.querySelectorAll(".ürün-toplam");
+
+  //! querySelectorAll(), statik bir NodeList döndürür.
+  //! //! burada netten https://softauthor.com/javascript-htmlcollection-vs-nodelist/ adresinden göster
+  //* Dizi Değil!
+  //* Bir NodeList bir dizi gibi görünebilir ama öyle değildir.
+  //* Bir NodeList içinde döngü yapabilir ve düğümlerine index'ine göre başvurabilirsiniz.
+  //* Ancak, bir NodeList'te push(), pop() veya join() ve reduce gibi Array yöntemlerini kullanamazsınız.
+
+  //! 2.yol
+  // console.log(
+  //   Number(urunToplam[0].textContent) +
+  //     +urunToplam[1].textContent +
+  //     +urunToplam[2].textContent
+  // );
+
+  //? Reduce tam olarak Array istiyor, Nodelist yeterli degil
+
+  const araToplam = Array.from(urunToplam).reduce(
+    (topl, item) => topl + Number(item.textContent),
+    0
+  );
+
+  //* ara toplam
+  document.querySelector(".aratoplam").textContent = araToplam;
+
+  //* vergi
+  document.querySelector(".vergi").textContent = araToplam * 0.18;
+
+  //* kargo
+  document.querySelector(".kargo").textContent = 15.0;
+
+  //* sontoplam
+  document.querySelector(".toplam").textContent =
+    araToplam + araToplam * 0.18 + 15.0;
+}
