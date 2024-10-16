@@ -16,7 +16,7 @@ let sepettekiler = [
 sepettekiler.forEach((urun) => {
   const { name, price, adet, img } = urun;
 
-  document.querySelector("#urun-rowlari").innerHTML = `
+  document.querySelector("#urun-rowlari").innerHTML += `
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-lg-3 col-md-5">
