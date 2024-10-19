@@ -120,3 +120,17 @@ const harcamayiDomaYaz = (yeniHarcama) => {
 };
 
 //! hesapla ve güncelle
+
+const hesaplaveGuncelle = () => {
+  const giderler = harcamaListesi.reduce(
+    (toplam, harcama) => toplam + Number(harcama.miktar)
+  );
+
+  giderinizTable.textContent = giderler;
+
+  kalanTable.textContent = gelirim - giderler;
+};
+
+//! localStorage kullandigimizda refresh'te ekranda localdeki kayitli bilgiler gelsin diye yazilan komut
+
+harcamaListesi.forEach((a) => harcamayiDomaYaz(a));
