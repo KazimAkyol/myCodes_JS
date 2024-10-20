@@ -6,6 +6,10 @@ eventListeners();
 
 function eventListeners() {
   window.addEventListener("load", function () {
+    let carts = GetCartsFromStorage();
+    this.document.getElementById("cart-count").innerText[i].innerText =
+      carts.length;
+
     for (let i = 0; i < cart_btn.length; i++)
       cart_btn[i].addEventListener("click", AddCart);
   });
@@ -63,4 +67,30 @@ function ShowAlert() {
   setTimeout(function () {
     $("#success-alert").hide();
   }, 2000);
+}
+
+function GetDetailPage() {
+  window.location.href = "./detail.html";
+}
+
+function GetShoppingCartPage() {
+  window.location.href = "./index.html";
+}
+
+function FillDetailTable(){
+    let html=""
+    let carts = GetCartsFromStorage()
+
+    for(let i=0; i<carts.length; i++){
+        html+="<tr>"+
+        "<td>"+carts[i].product_name+"</td>"+
+        "<td>"+carts[i].product_price+"</td>"+
+        "<td>"+carts[i].product_count+"</td>"+
+        "<td>"+carts[i].total_Price+"</td>"+
+        "<td><i class="fas fa-trash delete" onclick="DeleteCartFromStorage("+i+");"></i></td>"+
+        "</tr>";
+
+        document.getElementById("cart-detail").innerHTML=html;
+        document.getElementById("cart-count").innerText= carts.length-1;
+    }
 }
