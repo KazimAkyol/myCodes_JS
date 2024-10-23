@@ -23,7 +23,7 @@ paragraf.width = "300px";
 //* ======================================================
 //*                   GETELEMENTSBYTAGNAME()
 //*======================================================
-//! tag ismiyle çağırıyoruz,aynı tag'den çok olacağı için index'le hangisini seçtiğimizi belirtiyoruz (HTMLCollection- Array özellikleri gösterir)
+//! tag ismiyle çağırıyoruz,aynı tag'den çok olacağı için index'le hangisini seçtiğimizi belirtiyoruz (HTMLCollection - Array özellikleri gösterir)
 
 const resim = document.getElementsByTagName("img");
 console.log(resim); // HTMLCollection
