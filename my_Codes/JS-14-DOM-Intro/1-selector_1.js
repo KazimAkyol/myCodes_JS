@@ -26,4 +26,32 @@ paragraf.width = "300px";
 //! tag ismiyle çağırıyoruz,aynı tag'den çok olacağı için index'le hangisini seçtiğimizi belirtiyoruz (HTMLCollection - Array özellikleri gösterir)
 
 const resim = document.getElementsByTagName("img");
-console.log(resim);
+console.log(resim); // HTML-Collection
+
+resim[0].style.width = "300px";
+
+resim[1].style.border = "2px solid red";
+
+//* ======================================================
+//*                   GETELEMENTSBYCLASSNAME()
+//*======================================================
+//! class ismiyle çağırıyoruz
+
+const baslik = document.getElementsByClassName("HBIR");
+
+console.log(baslik); // dom selector-merhaba
+
+//* HTML-Collection (arrayimsi)'larda ARRAY'i degistirmeyen metodlari kullanabilirsiniz
+
+// baslik[0].style.color = "red";
+// baslik[0].style.textAlign = "center";
+
+// baslik[1].style.color = "red";
+// baslik[1].style.textAlign = "center";
+
+for (let i = 0; i < 2; i++) {
+  baslik[i].style.color = "red";
+  baslik[i].style.textAlign = "center";
+}
+
+baslik[0].innerHTML="<a href="">DOM COK GÜZEL</a>"

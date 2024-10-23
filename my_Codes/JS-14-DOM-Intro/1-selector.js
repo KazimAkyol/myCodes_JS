@@ -41,13 +41,13 @@ const baslik = document.getElementsByClassName("HBIR");
 
 console.log(baslik); // dom selector-merhaba
 
-//* HTMLCollecton (arrayimsi)'larda ARRAY'i degistirmeyen metodlari kullanabilirsiniz
+//* HTML-Collection (arrayimsi)'larda ARRAY'i degistirmeyen metodlari kullanabilirsiniz
 
 // baslik[0].style.color = "red";
 // baslik[0].style.textAlign = "center";
 
 // baslik[1].style.color = "red";
-// baslik[1].style.textAlign = "center"
+// baslik[1].style.textAlign = "center";
 
 for (let i = 0; i < 2; i++) {
   baslik[i].style.color = "red";
