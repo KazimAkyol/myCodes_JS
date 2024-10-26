@@ -17,7 +17,7 @@ const paragraf = document.getElementById("par1").style;
 
 paragraf.background = "yellow";
 paragraf.color = "red";
-paragraf.margin = "200px";
+paragraf.margin = "100px";
 paragraf.width = "300px";
 
 //* ======================================================
@@ -54,4 +54,24 @@ for (let i = 0; i < 2; i++) {
   baslik[i].style.textAlign = "center";
 }
 
-baslik[0].innerHTML="<a href="">DOM COK GÜZEL</a>"
+baslik[0].innerHTML =
+  " H1 in ici <a href='https://clarusway.com/'> DOM COK GÜZEL</a>";
+
+baslik[1].textContent = "HALLO";
+
+//* sadece içerik değişecekse textContent tercih edilir, ama innerHTML de etiketi değiştirebildiği gibi, sadece içeriği de değiştirebilir
+
+//* ======================================================
+//*                  QUERYSELECTOR,QUERYSELECTORALL
+//*======================================================
+
+document.querySelector("title").textContent = "DOM MANIPULASYON 💖";
+
+document.querySelector("#badi").style.backgroundImage =
+  "linear-gradient(green,pink)"; // body'ye verilen id=badi'yi query.selector ile yakalayip style.backgroundImage ile arka plan rengini green'den pink'e bir gecis verdik.
+
+document.querySelector(".HIKI").style.color = "pink"; // h1'e verilen class=HIKI'yi query.selector ile yakalayip style.color ile yazinin rengini pink yaptik.
+
+document.querySelector("p").style.fontSize = "50px"; // p'yi query.selector ile yakalayip style.fontSize ile font büyüklügünü 50 px yaptik.
+
+// querySelector ile cagirdiginiz (normalde birden fazla varsa) etiketin ilki gelir.

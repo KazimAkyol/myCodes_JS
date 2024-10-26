@@ -76,7 +76,7 @@ console.log(document.querySelector("p"));
 
 document.querySelector("p").style.fontSize = "50px";
 
-//querySelector ile cagirdiginiz (normalde birden fazla varsa) ilki gelir
+// querySelector ile cagirdiginiz (normalde birden fazla varsa) etiketin ilki gelir.
 
 const paragraflar = document.querySelectorAll("p");
 console.log(paragraflar);
