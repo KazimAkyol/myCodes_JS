@@ -46,3 +46,17 @@ button.onclick = () => {
 
   document.querySelector("#par1").style.fontSize = "50px"; // par1'i document.querySelector ile yakalayip style.fontSize'ini 50px yaptik, button.onclick yapildiginda.
 };
+
+//? METHOD-2 (sadece JAVASCRIPT'te yazilir - addEventListener()) 2.yol
+
+button.addEventListener("clcik", () => {
+  button.textContent = "TIKLANDI";
+
+  badi.style.background = "aqua";
+
+  document.querySelector("#par1").style.fontSize = "50px";
+});
+
+//? METHOD-3 (HTML-INLINE)
+
+// kodlari html sayfasinda
