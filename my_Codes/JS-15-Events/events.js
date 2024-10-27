@@ -22,7 +22,7 @@ ses1.volume = 0.5;
 document.querySelector(".baglat").onclick = () => {
   resim.src = "./image/telbagla.gif";
 
-  //* audio'nun sesini kapatmak icin pause() komutu
+  // audio'nun sesini kapatmak icin pause() komutu
   ses1.pause();
 };
 
