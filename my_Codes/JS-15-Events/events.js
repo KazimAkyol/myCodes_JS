@@ -11,7 +11,7 @@ document.querySelector(".ara").onclick = () => {
   resim.src = "./image/img.gif";
 };
 
-// audio calistir. play() komutu HTML'deki audio'yu calistirir
+//* audio calistir. play() komutu HTML'deki audio'yu calistirir
 ses1.play();
 
 // sesin volume'ünü 0 ile 1 arasinda degerler vererek ayarlayabiliriz
