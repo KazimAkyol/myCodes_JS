@@ -96,6 +96,6 @@ paragraflar[1].style.fontSize = "70px";
 //* Dizi Değil!
 //* Bir NodeList bir dizi gibi görünebilir ama öyle değildir.
 
-//* Bir NodeList içinde döngü yapabilir ve düğümlerine index ine göre başvurabilirsiniz.
+//* Bir NodeList içinde döngü yapabilir ve düğümlerine index'ine göre başvurabilirsiniz.
 
 //* Ancak, bir NodeList'te push(), pop() veya join() gibi diziyi değiştiren Array yöntemlerini kullanamazsınız.
