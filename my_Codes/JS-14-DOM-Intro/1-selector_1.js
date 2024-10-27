@@ -23,7 +23,7 @@ paragraf.width = "300px";
 //* ======================================================
 //*                   GETELEMENTSBYTAGNAME()
 //*======================================================
-//! tag ismiyle çağırıyoruz,aynı tag'den çok olacağı için index'le hangisini seçtiğimizi belirtiyoruz (HTMLCollection - Array özellikleri gösterir)
+//! tag ismiyle çağırıyoruz,aynı tag'den çok olacağı için index'le hangisini seçtiğimizi belirtiyoruz (HTML-Collection - Array özellikleri gösterir)
 
 const resim = document.getElementsByTagName("img");
 console.log(resim); // HTML-Collection
@@ -55,7 +55,7 @@ for (let i = 0; i < 2; i++) {
 }
 
 baslik[0].innerHTML =
-  " H1 in ici <a href='https://clarusway.com/'> DOM COK GÜZEL</a>";
+  " H1'in ici <a href='https://clarusway.com/'>DOM COK GÜZEL</a>";
 
 baslik[1].textContent = "HALLO";
 
@@ -75,3 +75,27 @@ document.querySelector(".HIKI").style.color = "pink"; // h1'e verilen class=HIKI
 document.querySelector("p").style.fontSize = "50px"; // p'yi query.selector ile yakalayip style.fontSize ile font büyüklügünü 50 px yaptik.
 
 // querySelector ile cagirdiginiz (normalde birden fazla varsa) etiketin ilki gelir.
+
+const paragraflar = document.querySelectorAll("p");
+console.log(paragraflar);
+
+paragraflar[1].style.fontSize = "70px";
+
+//* Bir NodeList ve bir HTML-Collection hemen hemen aynı şeydir.
+
+//* Her ikisi de bir belgeden çıkarılan düğümlerin (öğelerin-node) dizi benzeri koleksiyonlarıdır (listeleridir).Düğümlere indeks numaraları ile erişilebilir,indeks 0'dan başlar.
+
+//* Her ikisinin de listedeki (koleksiyon) öğelerin sayısını döndüren bir uzunluk özelliği (length) vardır.
+
+//* getElementsByClassName() ve yöntemleri , getElementsByTagName() canlı bir HTML-Collection döndürür.
+
+//* querySelectorAll(), statik bir NodeList döndürür.
+
+//! burada netten https://softauthor.com/javascript-htmlcollection-vs-nodelist/ adresinden göster.
+
+//* Dizi Değil!
+//* Bir NodeList bir dizi gibi görünebilir ama öyle değildir.
+
+//* Bir NodeList içinde döngü yapabilir ve düğümlerine index ine göre başvurabilirsiniz.
+
+//* Ancak, bir NodeList'te push(), pop() veya join() gibi diziyi değiştiren Array yöntemlerini kullanamazsınız.

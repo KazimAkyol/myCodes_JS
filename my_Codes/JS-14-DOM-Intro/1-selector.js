@@ -23,7 +23,7 @@ paragraf.width = "300px";
 //* ======================================================
 //*                   GETELEMENTSBYTAGNAME()
 //*======================================================
-//! tag ismiyle çağırıyoruz,aynı tag'den çok olacağı için index'le hangisini seçtiğimizi belirtiyoruz (HTMLCollection - Array özellikleri gösterir)
+//! tag ismiyle çağırıyoruz,aynı tag'den çok olacağı için index'le hangisini seçtiğimizi belirtiyoruz (HTML-Collection - Array özellikleri gösterir)
 
 const resim = document.getElementsByTagName("img");
 console.log(resim); // HTMLCollection
@@ -55,7 +55,7 @@ for (let i = 0; i < 2; i++) {
 }
 
 baslik[0].innerHTML =
-  " H1'in ici <a href ='https://clarsuway.com/'>DOM COK GÜZEL</a>";
+  " H1'in ici <a href ='https://clarusway.com/'>DOM COK GÜZEL</a>";
 
 baslik[1].textContent = "HALLO";
 
@@ -83,13 +83,13 @@ console.log(paragraflar);
 
 paragraflar[1].style.fontSize = "70px";
 
-//* Bir NodeList ve bir HTMLCollection hemen hemen aynı şeydir.
+//* Bir NodeList ve bir HTML-Collection hemen hemen aynı şeydir.
 
 //* Her ikisi de bir belgeden çıkarılan düğümlerin (öğelerin-node) dizi benzeri koleksiyonlarıdır (listeleridir).Düğümlere indeks numaraları ile erişilebilir,indeks 0'dan başlar.
 
 //* Her ikisinin de listedeki (koleksiyon) öğelerin sayısını döndüren bir uzunluk özelliği (length) vardır.
 
-//* getElementsByClassName()ve yöntemleri , getElementsByTagName() canlı bir HTMLCollection döndürür.
+//* getElementsByClassName()ve yöntemleri , getElementsByTagName() canlı bir HTML-Collection döndürür.
 
 //* querySelectorAll(), statik bir NodeList döndürür.
 
