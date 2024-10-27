@@ -34,3 +34,15 @@ bir.ondblclick = () => {
   bir.src = "./img/bir.jpeg";
   iki.src = "./img/iki.webp";
 };
+
+//* example-3:
+
+const button = document.querySelector("#btn");
+
+button.onclick = () => {
+  button.textContent = "TIKLANDI";
+
+  badi.style.background = "aqua"; // globalde tanimlanan badi'yi yakalayip button.onclick yapildiginda arka plan rengini aqua yaptik.
+
+  document.querySelector("#par1").style.fontSize = "50px"; // par1'i document.querySelector ile yakalayip style.fontSize'ini 50px yaptik, button.onclick yapildiginda.
+};
