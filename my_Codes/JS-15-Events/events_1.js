@@ -49,3 +49,18 @@ resim.addEventListener("mouseout", () => {
 
   document.querySelector(".ses2").play();
 });
+
+//! klavyeden input'a veri girisi yapilirken, checked'in tikli olmasina bagli olarak, elimizi tustan cektigimizde olacaklar
+
+const textInput = document.querySelector("textbox");
+const checkInput = document.querySelector("checkbox");
+
+textInput.onkeyup = () => {
+  // checked=metodu checkbox input'un tikli olup olmadigini kontrol eder, tiklanmissa true döndürür.
+
+  if (checkInput.checked) {
+    textInput.value = textInput.value.toUpperCase();
+  } else {
+    textInput.value = textInput.value.toLowerCase();
+  }
+};
