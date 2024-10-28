@@ -52,8 +52,8 @@ resim.addEventListener("mouseout", () => {
 
 //! klavyeden input'a veri girisi yapilirken, checked'in tikli olmasina bagli olarak, elimizi tustan cektigimizde olacaklar
 
-const textInput = document.querySelector("textbox");
-const checkInput = document.querySelector("checkbox");
+const textInput = document.querySelector("#textbox");
+const checkInput = document.querySelector("#checkbox");
 
 textInput.onkeyup = () => {
   // checked=metodu checkbox input'un tikli olup olmadigini kontrol eder, tiklanmissa true döndürür.
@@ -63,4 +63,6 @@ textInput.onkeyup = () => {
   } else {
     textInput.value = textInput.value.toLowerCase();
   }
+  //input'a veri girisi yaptigimizda, kücük tikliyse benim büyük input'a girdigim harfleri büyüt, aksi durumda kücült.
 };
+

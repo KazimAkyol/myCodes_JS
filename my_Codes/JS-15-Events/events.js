@@ -61,7 +61,7 @@ textInput.onkeyup = () => {
   } else {
     textInput.value = textInput.value.toLowerCase();
   }
-  //input'a veri girisi yaptigimizda, kücük tikliyse benim büyük input'a girdigim harfleri büyüt, aksi durumda kücült
+  //input'a veri girisi yaptigimizda, kücük tikliyse benim büyük input'a girdigim harfleri büyüt, aksi durumda kücült.
 };
 
 //! listemin basina "Programlama Dilleri" h1 etiketi ekleme
