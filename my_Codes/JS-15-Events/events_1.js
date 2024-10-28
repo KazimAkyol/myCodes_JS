@@ -101,3 +101,41 @@ document.querySelector("main").after(baslik);
 //!  "append" metodu ile seçtiğimiz HTML etiketi bitmeden önceki son kısma ekleme yapabiliriz (<div>merhaba -buraya-  </div>).  "prepend" metodu ile seçtiğimiz HTML etiketi başladıktan sonraki ilk kısma ekleme yapabiliriz  (<div> -buraya-  merhaba   </div>).  "after" metodu ile ile seçtiğimiz HTML etiketi bittikten sonraki ilk kısma ekleme yapabiliriz (<div> merhaba </div>  -buraya-).
 //! *******kısayol**********
 
+const bolum = document.querySelector("section");
+
+bolum.innerHTML =
+  `<h1 class='baslik2'>Programlama Dilleri</h1>` + bolum.innerHTML;
+
+//! languages input'una girilen verileri ul'ye eklemek
+//! uzun yol:
+
+const dil = document.querySelector(".languages");
+const liste = document.querySelector(".liste");
+
+document.querySelector(".ekle").onclick = () => {
+  //* yeni girilen satiri saklamak icin bir li olusturduk
+  // const yeniLi = document.createElement("li");
+  //* yeni li icin textNode olusturduk
+  // const text = document.createTextNode(dil.value);
+  //* olusturdugumuz textNode'u yeni li'ye bagladik
+  // yeniLi.appendChild(text);
+  //* yeni eklenen satiri var olan listeye (ul) baglayalim
+  // liste.appendChild(yeniLi);
+};
+
+document.querySelector(".ekle").onclick = () => {
+  liste.innerHTML = liste.innerHTML + `<li>${dil.value}</li>`;
+
+  // ekle'ye basilip li eklenince input'un ici bosalsin
+  dil.value = "";
+};
+
+//! sil komutuna basinca ul listesinden li elemani silmek
+
+document.querySelector(".sil").onclick = () => {
+  liste.removeChild(liste.lastElementChild); // ul'nin son cocugunu siler
+
+  liste.removeChild(liste.firstElementChild); // ul'nin ilk cocugunu siler
+
+  liste.removeChild(liste.children[2]); // ul'nin 2 indexli cocugunu siler
+};

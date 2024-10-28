@@ -113,9 +113,9 @@ const liste = document.querySelector(".liste");
 document.querySelector(".ekle").onclick = () => {
   //* yeni girilen satiri saklamak icin bir li olusturduk
   // const yeniLi = document.createElement("li");
-  //* yeni li icin textnode olusturduk
+  //* yeni li icin textNode olusturduk
   // const text = document.createTextNode(dil.value);
-  //* olusturdugumuz textnode'u yeni li'ye bagladik
+  //* olusturdugumuz textNode'u yeni li'ye bagladik
   // yeniLi.appendChild(text);
   //* yeni eklenen satiri var olan listeye (ul) baglayalim
   // liste.appendChild(yeniLi);
