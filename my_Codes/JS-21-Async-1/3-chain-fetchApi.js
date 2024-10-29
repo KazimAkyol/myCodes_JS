@@ -1,0 +1,19 @@
+//* ===========================================================
+//*                3- FETCH API
+//*============================================================
+
+//? Dis kaynaklardan veri getirmek icin kullanilan basit bir arabirimdir.
+//? Ag istekleri yapmamiza ve cevaplari yönetebilmemize olanak saglar.
+//? Javascript ortaminda en cok kullanilan Asenkron islem örneklerinin basinda gelmektedir.
+
+//? fetch() fonksiyonu veri getirmek istediginiz kaynagin yolunu gosteren zorunlu bir parametre almaktadir ve bu istegin cevabini gösteren bir Promise döndürmektedir.
+
+//?! Bu baglamda syntatic sugar benzetmesi yapilabilir.
+
+//!throw ile hata fırlatırsak kodumuz o satırda durur. Kodumuzu durdurmak istemezsek diğer sayfadaki kodları kullanırız.
+
+// Informational responses (100 – 199)
+// Successful responses (200 – 299)
+// Redirection messages (300 – 399)
+// Client error responses (400 – 499)
+// Server error responses (500 – 599)
