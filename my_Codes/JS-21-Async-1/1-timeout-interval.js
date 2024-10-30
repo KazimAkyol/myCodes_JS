@@ -28,6 +28,10 @@ setTimeout(() => {
 //?setInterval non-blocking (kod burada takılı kalmaz alttaki kodlarda çalışır)
 
 let sayac = 0;
-setInterval(() => {
+const interv = setInterval(() => {
   console.log(++sayac);
-}, 1000);
+
+  if (sayac == 7) {
+    clearInterval(interv); // baslayan Interval'i durdurma
+  }
+}, 1000); // sayaci 1 saniyede 1'er arttir ve daha sonra clearInterval() komutu ile sayac 7'ye geldiginde durdur.

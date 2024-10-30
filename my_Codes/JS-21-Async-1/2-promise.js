@@ -22,7 +22,29 @@
 //* fulfilled: islemin basariyla tamamlandigini gosteren state.
 //* rejected: islemin basarisizlikla tamamlandigini gosteren state.
 
-//! Bir promise ile degerler tamamlanabilir yada bir sebeple (hata) iptal edilebilir.
+//! Bir promise ile degerler tamamlanabilir ya da bir sebeple (hata) iptal edilebilir.
 //! Bu durumlar then() ve catch() metotlari ile yakalanabilir.
 //? then() ve catch() metotlari promise döndürürler.
 //? Zincirleme (chain) olarak kullanilabilirler.
+
+const person = { name: "kağan", surname: "bilir" };
+
+new Promise((resolve, reject) => {
+  // if(databaseden veriler düzgün geldiyse)
+  if (true) {
+    // if (false) {
+    resolve(person); //person yerinde database in url si olur
+  } else {
+    reject(new Error("promise başarisiz"));
+  }
+})
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error));
+
+//  //?----------------------------------------------------
+// //* 1- XMLHttpRequest (Eski yontem, Ornek: AJAX)
+// //? https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+// //* 2- Promise,
+// //* daha tercih edilenler
+// //! 3- Fetch API (Promise'in basitlestirilmis hali zincir(chain)),
+// //! 4- ASYNC-AWAIT (Fetch API'nin chain dışında makyajlanmış hali)
