@@ -24,18 +24,59 @@
 
 // console.log("merhaba");
 
+//! butona basilmadan önce verilerin gelmesi icin yazilan kod:
+
+// fetch("https://api.github.com/users")
+//   .then((res) => res.json())
+//   .then((veri) => ekranaBastir(veri));
+
+// const ekranaBastir = (veri) => {
+//   veri.forEach((person) => {
+//     document.querySelector(".users").innerHTML += `
+
+//         <h1> ${person.login} </h1>
+//         <img width = "50%" src = ${person.avatar_url}/>
+//         <h3> ${person.node_id}</h3>`;
+//   });
+// };
+
 //! butona basildiktan sonra verilerin gelmesi icin yazilan kod:
 
-fetch("https://api.github.com/users")
-  .then((res) => res.json())
-  .then((veri) => ekranaBastir(veri));
+document.querySelector(".btn").onclick = () => {
+  fetch("https://api.github.com/users")
+    .then((res) => res.json())
+    .then((veri) => ekranaBastir(veri));
+};
 
 const ekranaBastir = (veri) => {
   veri.forEach((person) => {
     document.querySelector(".users").innerHTML += `
-        
-        <h1> ${person.login} </h1>
-        <img width = "50%" src = ${person.avatar_url}/>
-        <h3> ${person.node_id}</h3>`;
+          
+          <h1> ${person.login} </h1>
+          <img width = "50%" src = ${person.avatar_url}/>
+          <h3> ${person.node_id}</h3>`;
   });
 };
+
+//! butona basildiktan sonra hatayi bulmak icin yazilan kod:
+
+document.querySelector(".btn").onclick = () => {
+  fetch("https://api.github.com/users")
+    .then((res) => {
+      if (res.ok != true) {
+        throw new Error("url'de hata var");
+      }
+
+      return res.json();
+    })
+    .then((veri) => ekranaBastir(veri));
+};
+
+const ekranaBastir = (veri) => {
+    veri.forEach((person) => {
+        document.querySelector(".users").innerHTML += `
+        <h1> ${person.login} </h1>
+        <img width
+        `
+    })
+}
