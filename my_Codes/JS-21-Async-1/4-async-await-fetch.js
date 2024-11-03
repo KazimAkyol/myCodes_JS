@@ -75,7 +75,7 @@ const getirData = async () => {
         <img src ="./img/404.png"/>
         <h1>${error}</h1>`;
   }
-};
+}; // try-catch fonksiyonu sayesinde hatayi firlatir ve sonrasinda kodu calistirmaya devam eder.
 
 getirData();
 
